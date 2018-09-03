@@ -1,20 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Big Mountain</title>
+  <title>大山</title>
   
-  
+  <subtitle>这是一个热爱技术、热爱烹饪的肥宅</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-08-31T08:14:43.108Z</updated>
+  <updated>2018-09-03T10:45:21.538Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
-    <name>Big Mountain</name>
+    <name>大山</name>
     
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>机器学习资料整理</title>
+    <link href="http://yoursite.com/2018/09/03/machine_learning_materials/"/>
+    <id>http://yoursite.com/2018/09/03/machine_learning_materials/</id>
+    <published>2018-09-03T10:38:41.948Z</published>
+    <updated>2018-09-03T10:45:21.538Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="微积分"><a href="#微积分" class="headerlink" title="微积分"></a>微积分</h4><p>&emsp;&emsp;<a href="https://ocw.mit.edu/courses/mathematics/18-01sc-single-variable-calculus-fall-2010/" target="_blank" rel="noopener">Single Variable Calculus - MIT</a></p><h4 id="线性代数"><a href="#线性代数" class="headerlink" title="线性代数"></a>线性代数</h4><p>&emsp;&emsp;<a href="https://ocw.mit.edu/courses/mathematics/18-06-linear-algebra-spring-2010/" target="_blank" rel="noopener">Linear Algebra - MIT</a></p><h4 id="概率论与数理统计"><a href="#概率论与数理统计" class="headerlink" title="概率论与数理统计"></a>概率论与数理统计</h4><p>&emsp;&emsp;(暂无)</p><h4 id="凸优化"><a href="#凸优化" class="headerlink" title="凸优化"></a>凸优化</h4><p>&emsp;&emsp;(暂无)</p><h4 id="Python"><a href="#Python" class="headerlink" title="Python"></a>Python</h4><p>&emsp;&emsp;<a href="https://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000" target="_blank" rel="noopener">廖雪峰Python教程</a><br>&emsp;&emsp;<a href="https://learnxinyminutes.com/docs/zh-cn/python3-cn/" target="_blank" rel="noopener">Learn python in Y minutes</a></p><h4 id="机器学习"><a href="#机器学习" class="headerlink" title="机器学习"></a>机器学习</h4><p>&emsp;&emsp;<a href="https://www.coursera.org/learn/machine-learning" target="_blank" rel="noopener">Coursera机器学习 - Andrew Ng</a><br>&emsp;&emsp;<a href="http://cs229.stanford.edu/" target="_blank" rel="noopener">CS229 - Andrew Ng</a><br>&emsp;&emsp;<a href="https://book.douban.com/subject/10590856/" target="_blank" rel="noopener">《统计学习方法》- 李航</a><br>&emsp;&emsp;<a href="https://book.douban.com/subject/26708119/" target="_blank" rel="noopener">《机器学习》 - 周志华</a><br>&emsp;&emsp;<a href="https://cn.udacity.com/mlnd" target="_blank" rel="noopener">Udacity Machine Learning Engineer Nanodegree</a></p><h4 id="深度学习"><a href="#深度学习" class="headerlink" title="深度学习"></a>深度学习</h4><p>&emsp;&emsp;<a href="https://www.coursera.org/specializations/deep-learning" target="_blank" rel="noopener">Coursera Deep Learning Sepecialization - deeplearning.ai</a></p><h4 id="自然语言系统"><a href="#自然语言系统" class="headerlink" title="自然语言系统"></a>自然语言系统</h4><p>&emsp;&emsp;(暂无)</p><h4 id="推荐系统"><a href="#推荐系统" class="headerlink" title="推荐系统"></a>推荐系统</h4><p>&emsp;&emsp;<a href="https://book.douban.com/subject/10769749/" target="_blank" rel="noopener">推荐系统实践 - 项亮</a></p><h4 id="竞赛"><a href="#竞赛" class="headerlink" title="竞赛"></a>竞赛</h4><p>&emsp;&emsp;<a href="https://www.kaggle.com/" target="_blank" rel="noopener">Kaggle</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h4 id=&quot;微积分&quot;&gt;&lt;a href=&quot;#微积分&quot; class=&quot;headerlink&quot; title=&quot;微积分&quot;&gt;&lt;/a&gt;微积分&lt;/h4&gt;&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://ocw.mit.edu/courses/mathematics/18-01
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>吴恩达机器学习笔记-目录</title>
+    <link href="http://yoursite.com/2018/09/03/machine_learning_note/"/>
+    <id>http://yoursite.com/2018/09/03/machine_learning_note/</id>
+    <published>2018-09-03T09:47:33.890Z</published>
+    <updated>2018-09-03T09:49:14.179Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>持续更新中……</p></blockquote><h5 id="·监督学习vs无监督学习"><a href="#·监督学习vs无监督学习" class="headerlink" title="·监督学习vs无监督学习"></a>·监督学习vs无监督学习</h5><h5 id="·单变量线性回归"><a href="#·单变量线性回归" class="headerlink" title="·单变量线性回归"></a>·单变量线性回归</h5><h5 id="·线代相关知识"><a href="#·线代相关知识" class="headerlink" title="·线代相关知识"></a>·线代相关知识</h5><h5 id="·Octave教程"><a href="#·Octave教程" class="headerlink" title="·Octave教程"></a>·Octave教程</h5>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;持续更新中……&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h5 id=&quot;·监督学习vs无监督学习&quot;&gt;&lt;a href=&quot;#·监督学习vs无监督学习&quot; class=&quot;headerlink&quot; title=&quot;·监督学习vs无监督学习&quot;&gt;&lt;/a&gt;·监督学习vs无
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
