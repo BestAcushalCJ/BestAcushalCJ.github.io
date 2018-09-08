@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-09-07T16:00:59.924Z</updated>
+  <updated>2018-09-08T07:08:18.931Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,46 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Coursera机器学习笔记(六) - 正则化</title>
+    <link href="http://yoursite.com/2018/09/08/machine_learning_note_06/"/>
+    <id>http://yoursite.com/2018/09/08/machine_learning_note_06/</id>
+    <published>2018-09-08T06:53:34.556Z</published>
+    <updated>2018-09-08T07:08:18.931Z</updated>
+    
+    <content type="html"><![CDATA[<script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});</script><script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script><blockquote><p>课程地址：<a href="https://www.coursera.org/learn/machine-learning/home/week/3" target="_blank" rel="noopener">Regularization</a><br>课程Wiki：<a href="https://share.coursera.org/wiki/index.php/ML:Regularization" target="_blank" rel="noopener">Regularization</a></p></blockquote><h4 id="过拟合"><a href="#过拟合" class="headerlink" title="过拟合"></a>过拟合</h4><p>如下图所示, 使用三种不同的多项式作为假设函数对数据进行拟合, 左一和右一分别为过拟合和欠拟合。<br><img src="http://7xrrje.com1.z0.glb.clouddn.com/screenshot_101.png" alt="pic01"></p><a id="more"></a><p>对率回归:<br><img src="http://7xrrje.com1.z0.glb.clouddn.com/screenshot_102.png" alt="pic02"><br>解决过拟合问题大致分为两种, 一种是减少特征的数量, 可以人工选择一些比较重要的特征留下, 也可以使用模型选择算法(Model selection algorithm,后面的课程会介绍)；另一种就是正则化(Regularization)。<br><img src="http://7xrrje.com1.z0.glb.clouddn.com/screenshot_103.png" alt="pic03"></p><h4 id="正则化"><a href="#正则化" class="headerlink" title="正则化"></a>正则化</h4><p>如图所示的两个假设函数, 其中第二个为过拟合. 那么该如何改变代价函数能够让最中的假设函数不过拟合? 对比两个假设函数我们可以看到, 它们的区别就在于第二个多了两个高阶项. 也就是说, 我们不希望出现后面两个高阶项, 即希望$\theta_3$、$\theta_4$尽可能小。<br><img src="http://7xrrje.com1.z0.glb.clouddn.com/screenshot_831.png" alt="pic04"><br>通过上面的想法, 我们把$\theta_3$、$\theta_4$放到代价函数中，并且加上很大的权重(1000):<br>$$J(\theta)=\frac{1}{2m}\sum_{i=1}^m(h_\theta(x^{(i)})-y^{(i)} )^2+1000\theta_3^2+1000\theta_4^2$$<br>现在如果要最小化代价函数, 那么最后两项也必须得最小. 这个时候, 就有$\theta_3\approx0$，$\theta_4\approx0$，从而这个四次多项式就变成了一个二次多项式, 解决了过拟合的问题。<br><img src="http://7xrrje.com1.z0.glb.clouddn.com/screenshot_104.png" alt="pic05"><br>对于正则化的一般思路是, 减少特征的数量, 降低模型的复杂度. 所以我们要对每个参数进行惩罚, 从而得到’更简单’的并且可以防止过拟合的模型. 但是在实际问题中我们很难判断哪些特征比较重要, 所以对每一个参数(除了第一个)参数进行惩罚, 将代价函数改为:<br>$$J(\theta)=\frac{1}{2m}\left[\sum_{i=1}^m(h_\theta(x^{(i)})-y^{(i)} )^2+\lambda\sum_{i=1}^n\theta_j^2\right]$$<br>其中，$\lambda\sum_{i=1}^n\theta_j^2$叫做正则化项(Regularization Term)，$\lambda$叫做正则化参数(Regularization Parameter)。$\lambda$的作用就是在”更好地拟合数据”和”防止过拟合”之间权衡。<br><img src="http://7xrrje.com1.z0.glb.clouddn.com/screenshot_105.png" alt="pic06"><br>如果$\lambda$过大的话，就会导致$\theta_1$、$\theta_2$、$\theta_3$…近似于0, 这样我们的假设函数就为：$h_\theta(x)=\theta_0$。这时就变成了欠拟合(Underfit). 所以需要选择一个合适的$\lambda$。后面的课程会讲到自动选择合适的$\lambda$的方法。<br><img src="http://7xrrje.com1.z0.glb.clouddn.com/screenshot_108.png" alt="pic07"></p><h4 id="正则化线性回归"><a href="#正则化线性回归" class="headerlink" title="正则化线性回归"></a>正则化线性回归</h4><p>通过正则化之后的$J(\theta)$我们可以得到对应的梯度下降算法, 如下图所示. 因为我们不对$\theta_0$进行惩罚, 所以将$\theta_0$的规则单独写出来, 其余的参数更新规则如下图第三行公式. 公式前半部分$1-\alpha\frac{\lambda}{m}$是一个比1小一点点的数(教授举了个例子大概是0.99), 而公式的后半部分和没有进行正则化的梯度下降的公式的后半部分是完全一样的. 所以区别就在于前半部分会将$\theta_j$缩小(因为乘了一个小于1的数)。<br><img src="http://7xrrje.com1.z0.glb.clouddn.com/screenshot_112.png" alt="pic08"><br>同样, 在正规方程中, 我们只需要在公式中加上一部分如下图所示<br><img src="http://7xrrje.com1.z0.glb.clouddn.com/screenshot_110.png" alt="pic09"><br>即：<br>$$\theta=(X^TX+\lambda\begin{bmatrix} 0&amp;0&amp;0&amp;0&amp;…&amp;0\ 0&amp;1&amp;0&amp;0&amp;…&amp;0\ 0&amp;0&amp;1&amp;0&amp;…&amp;0\ 0&amp;0&amp;0&amp;1&amp;…&amp;0\ 0&amp;0&amp;0&amp;0&amp;…&amp;0 \ 0&amp;0&amp;0&amp;0&amp;…&amp;1 \end{bmatrix})^{-1}X^Ty$$<br>并且对于正则化后的正规方程, 只要$\lambda&gt;0$, 括号里的那一项总是可逆的:<br><img src="http://7xrrje.com1.z0.glb.clouddn.com/screenshot_832.png" alt="pic10"></p><h4 id="正则化对率回归"><a href="#正则化对率回归" class="headerlink" title="正则化对率回归"></a>正则化对率回归</h4><p>类似地, 正则化逻辑回归中的代价函数和梯度下降如下图所示<br><img src="http://7xrrje.com1.z0.glb.clouddn.com/screenshot_114.png" alt="pic11"><br><img src="http://7xrrje.com1.z0.glb.clouddn.com/screenshot_111.png" alt="pic12"><br>下图是使用正则化的高级优化算法, 只需要在计算jVal时在后面加上一个正则化项以及在梯度后面减去一个$\frac{\lambda}{m}\theta_j$<br><img src="http://7xrrje.com1.z0.glb.clouddn.com/screenshot_113.png" alt="pic13"></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;script type=&quot;text/x-mathjax-config&quot;&gt;
+MathJax.Hub.Config({
+tex2jax: {inlineMath: [[&#39;$&#39;,&#39;$&#39;], [&#39;\\(&#39;,&#39;\\)&#39;]]}
+});
+&lt;/script&gt;
+
+&lt;script type=&quot;text/javascript&quot; async src=&quot;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML&quot;&gt;
+&lt;/script&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;课程地址：&lt;a href=&quot;https://www.coursera.org/learn/machine-learning/home/week/3&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Regularization&lt;/a&gt;&lt;br&gt;课程Wiki：&lt;a href=&quot;https://share.coursera.org/wiki/index.php/ML:Regularization&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Regularization&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&quot;过拟合&quot;&gt;&lt;a href=&quot;#过拟合&quot; class=&quot;headerlink&quot; title=&quot;过拟合&quot;&gt;&lt;/a&gt;过拟合&lt;/h4&gt;&lt;p&gt;如下图所示, 使用三种不同的多项式作为假设函数对数据进行拟合, 左一和右一分别为过拟合和欠拟合。&lt;br&gt;&lt;img src=&quot;http://7xrrje.com1.z0.glb.clouddn.com/screenshot_101.png&quot; alt=&quot;pic01&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="机器学习" scheme="http://yoursite.com/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="Machine Learning" scheme="http://yoursite.com/tags/Machine-Learning/"/>
+    
+      <category term="Math" scheme="http://yoursite.com/tags/Math/"/>
+    
+      <category term="Note" scheme="http://yoursite.com/tags/Note/"/>
+    
+      <category term="Regularization" scheme="http://yoursite.com/tags/Regularization/"/>
+    
+  </entry>
   
   <entry>
     <title>Coursera机器学习笔记(五) - Logistic Regression</title>
@@ -290,9 +330,9 @@ tex2jax: {inlineMath: [[&#39;$&#39;,&#39;$&#39;], [&#39;\\(&#39;,&#39;\\)&#39;]]
     
       <category term="machinelearning" scheme="http://yoursite.com/tags/machinelearning/"/>
     
-      <category term="math" scheme="http://yoursite.com/tags/math/"/>
-    
       <category term="deeplearning" scheme="http://yoursite.com/tags/deeplearning/"/>
+    
+      <category term="math" scheme="http://yoursite.com/tags/math/"/>
     
   </entry>
   
@@ -301,9 +341,9 @@ tex2jax: {inlineMath: [[&#39;$&#39;,&#39;$&#39;], [&#39;\\(&#39;,&#39;\\)&#39;]]
     <link href="http://yoursite.com/2018/09/03/machine_learning_note/"/>
     <id>http://yoursite.com/2018/09/03/machine_learning_note/</id>
     <published>2018-09-03T09:47:33.890Z</published>
-    <updated>2018-09-07T16:05:14.613Z</updated>
+    <updated>2018-09-08T07:05:32.036Z</updated>
     
-    <content type="html"><![CDATA[<blockquote><p>持续更新中……</p></blockquote><h5 id="Coursera机器学习笔记-一-监督学习vs无监督学习"><a href="#Coursera机器学习笔记-一-监督学习vs无监督学习" class="headerlink" title="Coursera机器学习笔记(一) - 监督学习vs无监督学习"></a><a href="https://bigmoutain.cn/2018/09/04/machine_learning_note_01/" target="_blank" rel="noopener">Coursera机器学习笔记(一) - 监督学习vs无监督学习</a></h5><h5 id="Coursera机器学习笔记-二-单变量线性回归"><a href="#Coursera机器学习笔记-二-单变量线性回归" class="headerlink" title="Coursera机器学习笔记(二) - 单变量线性回归"></a><a href="https://bigmoutain.cn/2018/09/04/machine_learning_note_02/" target="_blank" rel="noopener">Coursera机器学习笔记(二) - 单变量线性回归</a></h5><h5 id="Coursera机器学习笔记-三-多变量线性回归"><a href="#Coursera机器学习笔记-三-多变量线性回归" class="headerlink" title="Coursera机器学习笔记(三) - 多变量线性回归"></a><a href="https://bigmoutain.cn/2018/09/06/machine_learning_note_03/" target="_blank" rel="noopener">Coursera机器学习笔记(三) - 多变量线性回归</a></h5><h5 id="Coursera机器学习笔记-四-Octave教程"><a href="#Coursera机器学习笔记-四-Octave教程" class="headerlink" title="Coursera机器学习笔记(四) - Octave教程"></a><a href="https://bigmoutain.cn/2018/09/06/machine_learning_note_04/" target="_blank" rel="noopener">Coursera机器学习笔记(四) - Octave教程</a></h5><h5 id="Coursera机器学习笔记-五-Logistic-Regression"><a href="#Coursera机器学习笔记-五-Logistic-Regression" class="headerlink" title="Coursera机器学习笔记(五) - Logistic Regression"></a><a href="https://bigmoutain.cn/2018/09/07/machine_learning_note_05/" target="_blank" rel="noopener">Coursera机器学习笔记(五) - Logistic Regression</a></h5>]]></content>
+    <content type="html"><![CDATA[<blockquote><p>持续更新中……</p></blockquote><h5 id="Coursera机器学习笔记-一-监督学习vs无监督学习"><a href="#Coursera机器学习笔记-一-监督学习vs无监督学习" class="headerlink" title="Coursera机器学习笔记(一) - 监督学习vs无监督学习"></a><a href="https://bigmoutain.cn/2018/09/04/machine_learning_note_01/" target="_blank" rel="noopener">Coursera机器学习笔记(一) - 监督学习vs无监督学习</a></h5><h5 id="Coursera机器学习笔记-二-单变量线性回归"><a href="#Coursera机器学习笔记-二-单变量线性回归" class="headerlink" title="Coursera机器学习笔记(二) - 单变量线性回归"></a><a href="https://bigmoutain.cn/2018/09/04/machine_learning_note_02/" target="_blank" rel="noopener">Coursera机器学习笔记(二) - 单变量线性回归</a></h5><h5 id="Coursera机器学习笔记-三-多变量线性回归"><a href="#Coursera机器学习笔记-三-多变量线性回归" class="headerlink" title="Coursera机器学习笔记(三) - 多变量线性回归"></a><a href="https://bigmoutain.cn/2018/09/06/machine_learning_note_03/" target="_blank" rel="noopener">Coursera机器学习笔记(三) - 多变量线性回归</a></h5><h5 id="Coursera机器学习笔记-四-Octave教程"><a href="#Coursera机器学习笔记-四-Octave教程" class="headerlink" title="Coursera机器学习笔记(四) - Octave教程"></a><a href="https://bigmoutain.cn/2018/09/06/machine_learning_note_04/" target="_blank" rel="noopener">Coursera机器学习笔记(四) - Octave教程</a></h5><h5 id="Coursera机器学习笔记-五-Logistic-Regression"><a href="#Coursera机器学习笔记-五-Logistic-Regression" class="headerlink" title="Coursera机器学习笔记(五) - Logistic Regression"></a><a href="https://bigmoutain.cn/2018/09/07/machine_learning_note_05/" target="_blank" rel="noopener">Coursera机器学习笔记(五) - Logistic Regression</a></h5><h5 id="Coursera机器学习笔记-六-正则化"><a href="#Coursera机器学习笔记-六-正则化" class="headerlink" title="Coursera机器学习笔记(六) - 正则化"></a><a href="https://bigmoutain.cn/2018/09/08/machine_learning_note_06/" target="_blank" rel="noopener">Coursera机器学习笔记(六) - 正则化</a></h5>]]></content>
     
     <summary type="html">
     
@@ -320,11 +360,11 @@ tex2jax: {inlineMath: [[&#39;$&#39;,&#39;$&#39;], [&#39;\\(&#39;,&#39;\\)&#39;]]
       <category term="机器学习" scheme="http://yoursite.com/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="machinelearning" scheme="http://yoursite.com/tags/machinelearning/"/>
+      <category term="Machine Learning" scheme="http://yoursite.com/tags/Machine-Learning/"/>
     
-      <category term="math" scheme="http://yoursite.com/tags/math/"/>
+      <category term="Math" scheme="http://yoursite.com/tags/Math/"/>
     
-      <category term="note" scheme="http://yoursite.com/tags/note/"/>
+      <category term="Note" scheme="http://yoursite.com/tags/Note/"/>
     
   </entry>
   
