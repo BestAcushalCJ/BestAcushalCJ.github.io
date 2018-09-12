@@ -18,8 +18,8 @@
   
   <entry>
     <title>Coursera机器学习笔记(六) - 正则化</title>
-    <link href="http://yoursite.com/2018/09/08/machine_learning_note_06/"/>
-    <id>http://yoursite.com/2018/09/08/machine_learning_note_06/</id>
+    <link href="http://yoursite.com/machine_learning_note_06/"/>
+    <id>http://yoursite.com/machine_learning_note_06/</id>
     <published>2018-09-08T06:53:34.556Z</published>
     <updated>2018-09-08T07:08:18.931Z</updated>
     
@@ -58,8 +58,8 @@ tex2jax: {inlineMath: [[&#39;$&#39;,&#39;$&#39;], [&#39;\\(&#39;,&#39;\\)&#39;]]
   
   <entry>
     <title>Coursera机器学习笔记(五) - Logistic Regression</title>
-    <link href="http://yoursite.com/2018/09/07/machine_learning_note_05/"/>
-    <id>http://yoursite.com/2018/09/07/machine_learning_note_05/</id>
+    <link href="http://yoursite.com/machine_learning_note_05/"/>
+    <id>http://yoursite.com/machine_learning_note_05/</id>
     <published>2018-09-07T15:59:57.178Z</published>
     <updated>2018-09-07T16:00:59.924Z</updated>
     
@@ -98,8 +98,8 @@ tex2jax: {inlineMath: [[&#39;$&#39;,&#39;$&#39;], [&#39;\\(&#39;,&#39;\\)&#39;]]
   
   <entry>
     <title>Coursera机器学习笔记(四) - Octave教程</title>
-    <link href="http://yoursite.com/2018/09/06/machine_learning_note_04/"/>
-    <id>http://yoursite.com/2018/09/06/machine_learning_note_04/</id>
+    <link href="http://yoursite.com/machine_learning_note_04/"/>
+    <id>http://yoursite.com/machine_learning_note_04/</id>
     <published>2018-09-06T15:38:08.933Z</published>
     <updated>2018-09-06T16:08:39.606Z</updated>
     
@@ -138,8 +138,8 @@ tex2jax: {inlineMath: [[&#39;$&#39;,&#39;$&#39;], [&#39;\\(&#39;,&#39;\\)&#39;]]
   
   <entry>
     <title>Coursera机器学习笔记(三) - 多变量线性回归</title>
-    <link href="http://yoursite.com/2018/09/06/machine_learning_note_03/"/>
-    <id>http://yoursite.com/2018/09/06/machine_learning_note_03/</id>
+    <link href="http://yoursite.com/machine_learning_note_03/"/>
+    <id>http://yoursite.com/machine_learning_note_03/</id>
     <published>2018-09-06T07:04:35.958Z</published>
     <updated>2018-09-06T16:08:31.988Z</updated>
     
@@ -176,8 +176,8 @@ tex2jax: {inlineMath: [[&#39;$&#39;,&#39;$&#39;], [&#39;\\(&#39;,&#39;\\)&#39;]]
   
   <entry>
     <title>《极恶非道》观后感</title>
-    <link href="http://yoursite.com/2018/09/05/jiefeidao_comment/"/>
-    <id>http://yoursite.com/2018/09/05/jiefeidao_comment/</id>
+    <link href="http://yoursite.com/jiefeidao_comment/"/>
+    <id>http://yoursite.com/jiefeidao_comment/</id>
     <published>2018-09-05T14:18:06.603Z</published>
     <updated>2018-09-05T14:18:06.603Z</updated>
     
@@ -204,8 +204,8 @@ tex2jax: {inlineMath: [[&#39;$&#39;,&#39;$&#39;], [&#39;\\(&#39;,&#39;\\)&#39;]]
   
   <entry>
     <title>Coursera机器学习笔记(二) - 单变量线性回归(补充 - 梯度下降算法)</title>
-    <link href="http://yoursite.com/2018/09/05/machine_learning_note_02_addition/"/>
-    <id>http://yoursite.com/2018/09/05/machine_learning_note_02_addition/</id>
+    <link href="http://yoursite.com/machine_learning_note_02_addition/"/>
+    <id>http://yoursite.com/machine_learning_note_02_addition/</id>
     <published>2018-09-05T13:51:57.176Z</published>
     <updated>2018-09-05T13:53:58.677Z</updated>
     
@@ -239,12 +239,12 @@ tex2jax: {inlineMath: [[&#39;$&#39;,&#39;$&#39;], [&#39;\\(&#39;,&#39;\\)&#39;]]
   
   <entry>
     <title>Coursera机器学习笔记(二) - 单变量线性回归</title>
-    <link href="http://yoursite.com/2018/09/04/machine_learning_note_02/"/>
-    <id>http://yoursite.com/2018/09/04/machine_learning_note_02/</id>
+    <link href="http://yoursite.com/machine_learning_note_02/"/>
+    <id>http://yoursite.com/machine_learning_note_02/</id>
     <published>2018-09-04T14:27:55.458Z</published>
-    <updated>2018-09-06T16:07:48.039Z</updated>
+    <updated>2018-09-12T06:17:26.612Z</updated>
     
-    <content type="html"><![CDATA[<script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});</script><script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script><blockquote><p>课程地址：<a href="https://www.coursera.org/learn/machine-learning/home/week/1" target="_blank" rel="noopener">Linear Regression with One Variable</a><br>课程Wiki：<a href="https://share.coursera.org/wiki/index.php/ML:Linear_Regression_with_One_Variable" target="_blank" rel="noopener">Linear Regression with One Variable</a></p></blockquote><h4 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h4><h5 id="训练集"><a href="#训练集" class="headerlink" title="训练集"></a>训练集</h5><p>由训练样例(training example)组成的集合就是训练集(training set)，如下图所示, 其中$(x, y)$是一个训练样例, $(x^{(i)}, y^{(i)})$第i个训练样例。<br><img src="http://7xrrje.com1.z0.glb.clouddn.com/screenshot_05.png?imageMogr/v2/thumbnail/!45p" alt="pic01"></p><a id="more"></a><h5 id="假设函数"><a href="#假设函数" class="headerlink" title="假设函数"></a>假设函数</h5><p>使用某种学习算法对训练集的数据进行训练, 我们可以得到假设函数(Hypothesis Function), 如下图所示. 在房价的例子中，假设函数就是一个房价关于房子面积的函数。有了这个假设函数之后, 给定一个房子的面积我们就可以预测它的价格了。<br><img src="http://7xrrje.com1.z0.glb.clouddn.com/screenshot_583.png?imageMogr/v2/thumbnail/!55p" alt="pic02"><br>我们使用如下的形式表示假设函数, 为了方便，$h_\theta(x)$也可以记作$h(x)$<br>$${h_\theta(x)=\theta_0+\theta_1x}$$<br>以上这个模型就叫做单变量的线性回归(Linear Regression with One Variable). (Linear regression with one variable = Univariate linear regression，univariate是one variable的装逼写法。)<br><img src="http://7xrrje.com1.z0.glb.clouddn.com/screenshot_584.png?imageMogr/v2/thumbnail/!55p" alt="pic03"></p><h4 id="代价函数"><a href="#代价函数" class="headerlink" title="代价函数"></a>代价函数</h4><h5 id="什么是代价函数"><a href="#什么是代价函数" class="headerlink" title="什么是代价函数"></a>什么是代价函数</h5><p>只要我们知道了假设函数, 我们就可以进行预测了. 关键是, 假设函数中有两个未知的量$\theta_0, \theta_1$，当选择不同的$\theta_0$和$\theta_1$时，我们模型的效果肯定是不一样的。如下图所示, 列举了三种不同的$\theta_0$和$\theta_1$下的假设函数。<br><img src="http://7xrrje.com1.z0.glb.clouddn.com/screenshot_08.png" alt="pic04"><br>现在的问题就是该如何选择这两个参数了。我们的想法是选择某个$\theta_0$和$\theta_1$，使得对于训练样例$(x,y)$，$h_\theta(x)$最接近$y$。越是接近, 代表这个假设函数越是准确, 这里我们选择均方误差来作为衡量标准, 即我们想要每个样例的估计值与真实值之间差的平方的均值最小。用公式表达为:<br>$${\mathop{minimize}\limits_{\theta_0,\theta_1} \frac{1}{2m}\sum_{i=0}^m\left(h_\theta(x^{(i)})-y^{(i)}\right)^2}$$<br>（其中$1/2$是为了后面方便计算）我们记<br>$${J(\theta_0,\theta_1)=\frac{1}{2m}\sum_{i=0}^m\left(h_\theta(x^{(i)})-y^{(i)}\right)^2}$$<br>这样就得到了我们的代价函数(cost function), 也就是我们的优化目标, 我们想要代价函数最小:<br>$$\mathop{minimize}\limits_{\theta_0,\theta_1}J(\theta_0,\theta_1)$$<br><img src="http://7xrrje.com1.z0.glb.clouddn.com/screenshot_10.png?imageMogr/v2/thumbnail/!45p" alt="pic05"></p><h5 id="代价函数和假设函数"><a href="#代价函数和假设函数" class="headerlink" title="代价函数和假设函数"></a>代价函数和假设函数</h5><p>现在为了更方便地探究$h_\theta(x)$和$J(\theta_0,\theta_1)$的关系，先令$\theta_0=0$，得到了简化后的假设函数，有假设函数的定义可知此时的假设函数是经过原点的直线. 相应地也也得到简化的代价函数。如图所示:<br><img src="http://7xrrje.com1.z0.glb.clouddn.com/screenshot_11.png?imageMogr/v2/thumbnail/!45p" alt="pic06"><br>简化之后，我们令$\theta_1=1$，就得到$h_\theta(x)=x$，如下图左所示。图中三个红叉表示训练样例，通过代价函数的定义我们计算得出$J(1)=0$，对应下图右中的$(0,1)$坐标<br><img src="http://7xrrje.com1.z0.glb.clouddn.com/screenshot_12.png?imageMogr/v2/thumbnail/!45p" alt="pic07"><br>重复上面的步骤，再令$\theta_1=0.5$，得到$h_\theta(x)$如下图左所示。通过计算得出$J(0.5)=0.58$，对应下图右中的$(0.5,0.58)$<br><img src="http://7xrrje.com1.z0.glb.clouddn.com/screenshot_13.png?imageMogr/v2/thumbnail/!45p" alt="pic08"><br>对于不同的$\theta_1$，对应着不同的假设函数$h_\theta(x)$，于是就有了不同的$J(\theta_1)$。将这些点连接起来就可以得到$J(\theta_1)$关于$\theta_1$的函数图像，如下图所示：<br><img src="http://7xrrje.com1.z0.glb.clouddn.com/screenshot_14.png?imageMogr/v2/thumbnail/!45p" alt="pic09"><br>我们的目标就是找到一个$\theta$使得$J(\theta)$最小，通过上面的描点作图的方式, 我们可以从图中看出, 当$\theta=1$的时候，$J(\theta)$取到最小值。</p><h5 id="代价函数与假设函数II"><a href="#代价函数与假设函数II" class="headerlink" title="代价函数与假设函数II"></a>代价函数与假设函数II</h5><p>在上一节中，我们令$\theta_0=0$，并且通过设置不同的$\theta_1$来描点作图得到$J(\theta_1)$的曲线。这一节我们不再令$\theta_0=0$，而是同时设置$\theta_0$和$\theta_1$的值，然后再绘出$J(\theta_0, \theta_1)$的图形。因为此时有两个变量，很容易想到$J(\theta_0, \theta_1)$应该是一个曲面, 如下图所示:<br><img src="http://7xrrje.com1.z0.glb.clouddn.com/screenshot_16.png?imageMogr/v2/thumbnail/!45p" alt="pic10"><br>这个图是教授用matlab绘制的，由于3D图形不太方便我们研究，我们就使用二维的等高线(上图右上角教授写的contour plots/figures)，这样看上去比较清楚一些。如下图右，越靠近中心表示$J(\theta_0, \theta_1)$的值越小(对应3D图中越靠近最低点的位置)。下图左表示当$\theta_0=800$，$\theta_1=0.15$的时候对应的$h_\theta(x)$，通过$\theta_0$和$\theta_1$的值可以找到下图右中$J(\theta_0, \theta_1)$的值。<br><img src="http://7xrrje.com1.z0.glb.clouddn.com/screenshot_17.png?imageMogr/v2/thumbnail/!45p" alt="pic11"><br>类似地：<br><img src="http://7xrrje.com1.z0.glb.clouddn.com/screenshot_18.png?imageMogr/v2/thumbnail/!45p" alt="pic12"><br><img src="http://7xrrje.com1.z0.glb.clouddn.com/screenshot_19.png?imageMogr/v2/thumbnail/!45p" alt="pic13"><br><img src="http://7xrrje.com1.z0.glb.clouddn.com/screenshot_20.png?imageMogr/v2/thumbnail/!45p" alt="pic14"><br>我们不断尝试直到找到一个最佳的$h_\theta(x)$。是否有特定的算法能帮助我们找到最佳的$h_\theta(x)$呢？下面我们就要介绍这个算法-<a href="https://bigmoutain.cn/2018/09/05/machine_learning_note_02_addition/" target="_blank" rel="noopener">梯度下降算法</a>。</p>]]></content>
+    <content type="html"><![CDATA[<script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});</script><script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script><blockquote><p>课程地址：<a href="https://www.coursera.org/learn/machine-learning/home/week/1" target="_blank" rel="noopener">Linear Regression with One Variable</a><br>课程Wiki：<a href="https://share.coursera.org/wiki/index.php/ML:Linear_Regression_with_One_Variable" target="_blank" rel="noopener">Linear Regression with One Variable</a></p></blockquote><h4 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h4><h5 id="训练集"><a href="#训练集" class="headerlink" title="训练集"></a>训练集</h5><p>由训练样例(training example)组成的集合就是训练集(training set)，如下图所示, 其中$(x, y)$是一个训练样例, $(x^{(i)}, y^{(i)})$第i个训练样例。<br><img src="http://7xrrje.com1.z0.glb.clouddn.com/screenshot_05.png?imageMogr/v2/thumbnail/!45p" alt="pic01"></p><a id="more"></a><h5 id="假设函数"><a href="#假设函数" class="headerlink" title="假设函数"></a>假设函数</h5><p>使用某种学习算法对训练集的数据进行训练, 我们可以得到假设函数(Hypothesis Function), 如下图所示. 在房价的例子中，假设函数就是一个房价关于房子面积的函数。有了这个假设函数之后, 给定一个房子的面积我们就可以预测它的价格了。<br><img src="http://7xrrje.com1.z0.glb.clouddn.com/screenshot_583.png?imageMogr/v2/thumbnail/!55p" alt="pic02"><br>我们使用如下的形式表示假设函数, 为了方便，$h_\theta(x)$也可以记作$h(x)$<br>$${h_\theta(x)=\theta_0+\theta_1x}$$<br>以上这个模型就叫做单变量的线性回归(Linear Regression with One Variable). (Linear regression with one variable = Univariate linear regression，univariate是one variable的装逼写法。)<br><img src="http://7xrrje.com1.z0.glb.clouddn.com/screenshot_584.png?imageMogr/v2/thumbnail/!55p" alt="pic03"></p><h4 id="代价函数"><a href="#代价函数" class="headerlink" title="代价函数"></a>代价函数</h4><h5 id="什么是代价函数"><a href="#什么是代价函数" class="headerlink" title="什么是代价函数"></a>什么是代价函数</h5><p>只要我们知道了假设函数, 我们就可以进行预测了. 关键是, 假设函数中有两个未知的量$\theta_0, \theta_1$，当选择不同的$\theta_0$和$\theta_1$时，我们模型的效果肯定是不一样的。如下图所示, 列举了三种不同的$\theta_0$和$\theta_1$下的假设函数。<br><img src="http://7xrrje.com1.z0.glb.clouddn.com/screenshot_08.png" alt="pic04"><br>现在的问题就是该如何选择这两个参数了。我们的想法是选择某个$\theta_0$和$\theta_1$，使得对于训练样例$(x,y)$，$h_\theta(x)$最接近$y$。越是接近, 代表这个假设函数越是准确, 这里我们选择均方误差来作为衡量标准, 即我们想要每个样例的估计值与真实值之间差的平方的均值最小。用公式表达为:<br>$${\mathop{minimize}\limits_{\theta_0,\theta_1} \frac{1}{2m}\sum_{i=0}^m\left(h_\theta(x^{(i)})-y^{(i)}\right)^2}$$<br>（其中$1/2$是为了后面方便计算）我们记<br>$${J(\theta_0,\theta_1)=\frac{1}{2m}\sum_{i=0}^m\left(h_\theta(x^{(i)})-y^{(i)}\right)^2}$$<br>这样就得到了我们的代价函数(cost function), 也就是我们的优化目标, 我们想要代价函数最小:<br>$$\mathop{minimize}\limits_{\theta_0,\theta_1}J(\theta_0,\theta_1)$$<br><img src="http://7xrrje.com1.z0.glb.clouddn.com/screenshot_10.png?imageMogr/v2/thumbnail/!45p" alt="pic05"></p><h5 id="代价函数和假设函数"><a href="#代价函数和假设函数" class="headerlink" title="代价函数和假设函数"></a>代价函数和假设函数</h5><p>现在为了更方便地探究$h_\theta(x)$和$J(\theta_0,\theta_1)$的关系，先令$\theta_0=0$，得到了简化后的假设函数，有假设函数的定义可知此时的假设函数是经过原点的直线. 相应地也也得到简化的代价函数。如图所示:<br><img src="http://7xrrje.com1.z0.glb.clouddn.com/screenshot_11.png?imageMogr/v2/thumbnail/!45p" alt="pic06"><br>简化之后，我们令$\theta_1=1$，就得到$h_\theta(x)=x$，如下图左所示。图中三个红叉表示训练样例，通过代价函数的定义我们计算得出$J(1)=0$，对应下图右中的$(0,1)$坐标<br><img src="http://7xrrje.com1.z0.glb.clouddn.com/screenshot_12.png?imageMogr/v2/thumbnail/!45p" alt="pic07"><br>重复上面的步骤，再令$\theta_1=0.5$，得到$h_\theta(x)$如下图左所示。通过计算得出$J(0.5)=0.58$，对应下图右中的$(0.5,0.58)$<br><img src="http://7xrrje.com1.z0.glb.clouddn.com/screenshot_13.png?imageMogr/v2/thumbnail/!45p" alt="pic08"><br>对于不同的$\theta_1$，对应着不同的假设函数$h_\theta(x)$，于是就有了不同的$J(\theta_1)$。将这些点连接起来就可以得到$J(\theta_1)$关于$\theta_1$的函数图像，如下图所示：<br><img src="http://7xrrje.com1.z0.glb.clouddn.com/screenshot_14.png?imageMogr/v2/thumbnail/!45p" alt="pic09"><br>我们的目标就是找到一个$\theta$使得$J(\theta)$最小，通过上面的描点作图的方式, 我们可以从图中看出, 当$\theta=1$的时候，$J(\theta)$取到最小值。</p><h5 id="代价函数与假设函数II"><a href="#代价函数与假设函数II" class="headerlink" title="代价函数与假设函数II"></a>代价函数与假设函数II</h5><p>在上一节中，我们令$\theta_0=0$，并且通过设置不同的$\theta_1$来描点作图得到$J(\theta_1)$的曲线。这一节我们不再令$\theta_0=0$，而是同时设置$\theta_0$和$\theta_1$的值，然后再绘出$J(\theta_0, \theta_1)$的图形。因为此时有两个变量，很容易想到$J(\theta_0, \theta_1)$应该是一个曲面, 如下图所示:<br><img src="http://7xrrje.com1.z0.glb.clouddn.com/screenshot_16.png?imageMogr/v2/thumbnail/!45p" alt="pic10"><br>这个图是教授用matlab绘制的，由于3D图形不太方便我们研究，我们就使用二维的等高线(上图右上角教授写的contour plots/figures)，这样看上去比较清楚一些。如下图右，越靠近中心表示$J(\theta_0, \theta_1)$的值越小(对应3D图中越靠近最低点的位置)。下图左表示当$\theta_0=800$，$\theta_1=0.15$的时候对应的$h_\theta(x)$，通过$\theta_0$和$\theta_1$的值可以找到下图右中$J(\theta_0, \theta_1)$的值。<br><img src="http://7xrrje.com1.z0.glb.clouddn.com/screenshot_17.png?imageMogr/v2/thumbnail/!45p" alt="pic11"><br>类似地：<br><img src="http://7xrrje.com1.z0.glb.clouddn.com/screenshot_18.png?imageMogr/v2/thumbnail/!45p" alt="pic12"><br><img src="http://7xrrje.com1.z0.glb.clouddn.com/screenshot_19.png?imageMogr/v2/thumbnail/!45p" alt="pic13"><br><img src="http://7xrrje.com1.z0.glb.clouddn.com/screenshot_20.png?imageMogr/v2/thumbnail/!45p" alt="pic14"><br>我们不断尝试直到找到一个最佳的$h_\theta(x)$。是否有特定的算法能帮助我们找到最佳的$h_\theta(x)$呢？下面我们就要介绍这个算法-<a href="https://bigmoutain.cn/machine_learning_note_02_addition/" target="_blank" rel="noopener">梯度下降算法</a>。</p>]]></content>
     
     <summary type="html">
     
@@ -278,8 +278,8 @@ tex2jax: {inlineMath: [[&#39;$&#39;,&#39;$&#39;], [&#39;\\(&#39;,&#39;\\)&#39;]]
   
   <entry>
     <title>Coursera机器学习笔记(一) - 监督学习vs无监督学习</title>
-    <link href="http://yoursite.com/2018/09/04/machine_learning_note_01/"/>
-    <id>http://yoursite.com/2018/09/04/machine_learning_note_01/</id>
+    <link href="http://yoursite.com/machine_learning_note_01/"/>
+    <id>http://yoursite.com/machine_learning_note_01/</id>
     <published>2018-09-04T14:03:23.953Z</published>
     <updated>2018-09-06T16:07:16.164Z</updated>
     
@@ -311,8 +311,8 @@ tex2jax: {inlineMath: [[&#39;$&#39;,&#39;$&#39;], [&#39;\\(&#39;,&#39;\\)&#39;]]
   
   <entry>
     <title>机器学习资料整理</title>
-    <link href="http://yoursite.com/2018/09/03/machine_learning_materials/"/>
-    <id>http://yoursite.com/2018/09/03/machine_learning_materials/</id>
+    <link href="http://yoursite.com/machine_learning_materials/"/>
+    <id>http://yoursite.com/machine_learning_materials/</id>
     <published>2018-09-03T10:38:41.948Z</published>
     <updated>2018-09-03T11:26:46.850Z</updated>
     
@@ -338,12 +338,12 @@ tex2jax: {inlineMath: [[&#39;$&#39;,&#39;$&#39;], [&#39;\\(&#39;,&#39;\\)&#39;]]
   
   <entry>
     <title>吴恩达机器学习笔记-目录</title>
-    <link href="http://yoursite.com/2018/09/03/machine_learning_note/"/>
-    <id>http://yoursite.com/2018/09/03/machine_learning_note/</id>
+    <link href="http://yoursite.com/machine_learning_note/"/>
+    <id>http://yoursite.com/machine_learning_note/</id>
     <published>2018-09-03T09:47:33.890Z</published>
-    <updated>2018-09-08T07:05:32.036Z</updated>
+    <updated>2018-09-12T06:17:28.594Z</updated>
     
-    <content type="html"><![CDATA[<blockquote><p>持续更新中……</p></blockquote><h5 id="Coursera机器学习笔记-一-监督学习vs无监督学习"><a href="#Coursera机器学习笔记-一-监督学习vs无监督学习" class="headerlink" title="Coursera机器学习笔记(一) - 监督学习vs无监督学习"></a><a href="https://bigmoutain.cn/2018/09/04/machine_learning_note_01/" target="_blank" rel="noopener">Coursera机器学习笔记(一) - 监督学习vs无监督学习</a></h5><h5 id="Coursera机器学习笔记-二-单变量线性回归"><a href="#Coursera机器学习笔记-二-单变量线性回归" class="headerlink" title="Coursera机器学习笔记(二) - 单变量线性回归"></a><a href="https://bigmoutain.cn/2018/09/04/machine_learning_note_02/" target="_blank" rel="noopener">Coursera机器学习笔记(二) - 单变量线性回归</a></h5><h5 id="Coursera机器学习笔记-三-多变量线性回归"><a href="#Coursera机器学习笔记-三-多变量线性回归" class="headerlink" title="Coursera机器学习笔记(三) - 多变量线性回归"></a><a href="https://bigmoutain.cn/2018/09/06/machine_learning_note_03/" target="_blank" rel="noopener">Coursera机器学习笔记(三) - 多变量线性回归</a></h5><h5 id="Coursera机器学习笔记-四-Octave教程"><a href="#Coursera机器学习笔记-四-Octave教程" class="headerlink" title="Coursera机器学习笔记(四) - Octave教程"></a><a href="https://bigmoutain.cn/2018/09/06/machine_learning_note_04/" target="_blank" rel="noopener">Coursera机器学习笔记(四) - Octave教程</a></h5><h5 id="Coursera机器学习笔记-五-Logistic-Regression"><a href="#Coursera机器学习笔记-五-Logistic-Regression" class="headerlink" title="Coursera机器学习笔记(五) - Logistic Regression"></a><a href="https://bigmoutain.cn/2018/09/07/machine_learning_note_05/" target="_blank" rel="noopener">Coursera机器学习笔记(五) - Logistic Regression</a></h5><h5 id="Coursera机器学习笔记-六-正则化"><a href="#Coursera机器学习笔记-六-正则化" class="headerlink" title="Coursera机器学习笔记(六) - 正则化"></a><a href="https://bigmoutain.cn/2018/09/08/machine_learning_note_06/" target="_blank" rel="noopener">Coursera机器学习笔记(六) - 正则化</a></h5>]]></content>
+    <content type="html"><![CDATA[<blockquote><p>持续更新中……</p></blockquote><h5 id="Coursera机器学习笔记-一-监督学习vs无监督学习"><a href="#Coursera机器学习笔记-一-监督学习vs无监督学习" class="headerlink" title="Coursera机器学习笔记(一) - 监督学习vs无监督学习"></a><a href="https://bigmoutain.cn/machine_learning_note_01/" target="_blank" rel="noopener">Coursera机器学习笔记(一) - 监督学习vs无监督学习</a></h5><h5 id="Coursera机器学习笔记-二-单变量线性回归"><a href="#Coursera机器学习笔记-二-单变量线性回归" class="headerlink" title="Coursera机器学习笔记(二) - 单变量线性回归"></a><a href="https://bigmoutain.cn/machine_learning_note_02/" target="_blank" rel="noopener">Coursera机器学习笔记(二) - 单变量线性回归</a></h5><h5 id="Coursera机器学习笔记-三-多变量线性回归"><a href="#Coursera机器学习笔记-三-多变量线性回归" class="headerlink" title="Coursera机器学习笔记(三) - 多变量线性回归"></a><a href="https://bigmoutain.cn/machine_learning_note_03/" target="_blank" rel="noopener">Coursera机器学习笔记(三) - 多变量线性回归</a></h5><h5 id="Coursera机器学习笔记-四-Octave教程"><a href="#Coursera机器学习笔记-四-Octave教程" class="headerlink" title="Coursera机器学习笔记(四) - Octave教程"></a><a href="https://bigmoutain.cn/machine_learning_note_04/" target="_blank" rel="noopener">Coursera机器学习笔记(四) - Octave教程</a></h5><h5 id="Coursera机器学习笔记-五-Logistic-Regression"><a href="#Coursera机器学习笔记-五-Logistic-Regression" class="headerlink" title="Coursera机器学习笔记(五) - Logistic Regression"></a><a href="https://bigmoutain.cn/machine_learning_note_05/" target="_blank" rel="noopener">Coursera机器学习笔记(五) - Logistic Regression</a></h5><h5 id="Coursera机器学习笔记-六-正则化"><a href="#Coursera机器学习笔记-六-正则化" class="headerlink" title="Coursera机器学习笔记(六) - 正则化"></a><a href="https://bigmoutain.cn/machine_learning_note_06/" target="_blank" rel="noopener">Coursera机器学习笔记(六) - 正则化</a></h5>]]></content>
     
     <summary type="html">
     

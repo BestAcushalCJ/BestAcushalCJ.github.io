@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Machine Learning,Math,Note,Regularization," />
+  <meta name="keywords" content="machinelearning,math,note," />
 
 
 
@@ -81,32 +81,33 @@
 
 
 
-<meta name="description" content="MathJax.Hub.Config({ tex2jax: {inlineMath: [[&apos;$&apos;,&apos;$&apos;], [&apos;\\(&apos;,&apos;\\)&apos;]]} });       课程地址：Regularization课程Wiki：Regularization  过拟合如下图所示, 使用三种不同的多项式作为假设函数对数据进行拟合, 左一和右一分别为过拟合和欠拟合。">
-<meta name="keywords" content="Machine Learning,Math,Note,Regularization">
+<meta name="description" content="MathJax.Hub.Config({ tex2jax: {inlineMath: [[&apos;$&apos;,&apos;$&apos;], [&apos;\\(&apos;,&apos;\\)&apos;]]} });        课程地址：Linear Regression with One Variable课程Wiki：Linear Regression with One Variable  基本概念训练集由训练样例(training example)组成的">
+<meta name="keywords" content="machinelearning,math,note">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Coursera机器学习笔记(六) - 正则化">
-<meta property="og:url" content="http://yoursite.com/2018/09/08/machine_learning_note_06/index.html">
+<meta property="og:title" content="Coursera机器学习笔记(二) - 单变量线性回归">
+<meta property="og:url" content="http://yoursite.com/machine_learning_note_02/index.html">
 <meta property="og:site_name" content="大山">
-<meta property="og:description" content="MathJax.Hub.Config({ tex2jax: {inlineMath: [[&apos;$&apos;,&apos;$&apos;], [&apos;\\(&apos;,&apos;\\)&apos;]]} });       课程地址：Regularization课程Wiki：Regularization  过拟合如下图所示, 使用三种不同的多项式作为假设函数对数据进行拟合, 左一和右一分别为过拟合和欠拟合。">
+<meta property="og:description" content="MathJax.Hub.Config({ tex2jax: {inlineMath: [[&apos;$&apos;,&apos;$&apos;], [&apos;\\(&apos;,&apos;\\)&apos;]]} });        课程地址：Linear Regression with One Variable课程Wiki：Linear Regression with One Variable  基本概念训练集由训练样例(training example)组成的">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://7xrrje.com1.z0.glb.clouddn.com/screenshot_101.png">
-<meta property="og:image" content="http://7xrrje.com1.z0.glb.clouddn.com/screenshot_102.png">
-<meta property="og:image" content="http://7xrrje.com1.z0.glb.clouddn.com/screenshot_103.png">
-<meta property="og:image" content="http://7xrrje.com1.z0.glb.clouddn.com/screenshot_831.png">
-<meta property="og:image" content="http://7xrrje.com1.z0.glb.clouddn.com/screenshot_104.png">
-<meta property="og:image" content="http://7xrrje.com1.z0.glb.clouddn.com/screenshot_105.png">
-<meta property="og:image" content="http://7xrrje.com1.z0.glb.clouddn.com/screenshot_108.png">
-<meta property="og:image" content="http://7xrrje.com1.z0.glb.clouddn.com/screenshot_112.png">
-<meta property="og:image" content="http://7xrrje.com1.z0.glb.clouddn.com/screenshot_110.png">
-<meta property="og:image" content="http://7xrrje.com1.z0.glb.clouddn.com/screenshot_832.png">
-<meta property="og:image" content="http://7xrrje.com1.z0.glb.clouddn.com/screenshot_114.png">
-<meta property="og:image" content="http://7xrrje.com1.z0.glb.clouddn.com/screenshot_111.png">
-<meta property="og:image" content="http://7xrrje.com1.z0.glb.clouddn.com/screenshot_113.png">
-<meta property="og:updated_time" content="2018-09-08T07:08:18.931Z">
+<meta property="og:image" content="http://7xrrje.com1.z0.glb.clouddn.com/screenshot_05.png?imageMogr/v2/thumbnail/!45p">
+<meta property="og:image" content="http://7xrrje.com1.z0.glb.clouddn.com/screenshot_583.png?imageMogr/v2/thumbnail/!55p">
+<meta property="og:image" content="http://7xrrje.com1.z0.glb.clouddn.com/screenshot_584.png?imageMogr/v2/thumbnail/!55p">
+<meta property="og:image" content="http://7xrrje.com1.z0.glb.clouddn.com/screenshot_08.png">
+<meta property="og:image" content="http://7xrrje.com1.z0.glb.clouddn.com/screenshot_10.png?imageMogr/v2/thumbnail/!45p">
+<meta property="og:image" content="http://7xrrje.com1.z0.glb.clouddn.com/screenshot_11.png?imageMogr/v2/thumbnail/!45p">
+<meta property="og:image" content="http://7xrrje.com1.z0.glb.clouddn.com/screenshot_12.png?imageMogr/v2/thumbnail/!45p">
+<meta property="og:image" content="http://7xrrje.com1.z0.glb.clouddn.com/screenshot_13.png?imageMogr/v2/thumbnail/!45p">
+<meta property="og:image" content="http://7xrrje.com1.z0.glb.clouddn.com/screenshot_14.png?imageMogr/v2/thumbnail/!45p">
+<meta property="og:image" content="http://7xrrje.com1.z0.glb.clouddn.com/screenshot_16.png?imageMogr/v2/thumbnail/!45p">
+<meta property="og:image" content="http://7xrrje.com1.z0.glb.clouddn.com/screenshot_17.png?imageMogr/v2/thumbnail/!45p">
+<meta property="og:image" content="http://7xrrje.com1.z0.glb.clouddn.com/screenshot_18.png?imageMogr/v2/thumbnail/!45p">
+<meta property="og:image" content="http://7xrrje.com1.z0.glb.clouddn.com/screenshot_19.png?imageMogr/v2/thumbnail/!45p">
+<meta property="og:image" content="http://7xrrje.com1.z0.glb.clouddn.com/screenshot_20.png?imageMogr/v2/thumbnail/!45p">
+<meta property="og:updated_time" content="2018-09-12T06:17:26.612Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Coursera机器学习笔记(六) - 正则化">
-<meta name="twitter:description" content="MathJax.Hub.Config({ tex2jax: {inlineMath: [[&apos;$&apos;,&apos;$&apos;], [&apos;\\(&apos;,&apos;\\)&apos;]]} });       课程地址：Regularization课程Wiki：Regularization  过拟合如下图所示, 使用三种不同的多项式作为假设函数对数据进行拟合, 左一和右一分别为过拟合和欠拟合。">
-<meta name="twitter:image" content="http://7xrrje.com1.z0.glb.clouddn.com/screenshot_101.png">
+<meta name="twitter:title" content="Coursera机器学习笔记(二) - 单变量线性回归">
+<meta name="twitter:description" content="MathJax.Hub.Config({ tex2jax: {inlineMath: [[&apos;$&apos;,&apos;$&apos;], [&apos;\\(&apos;,&apos;\\)&apos;]]} });        课程地址：Linear Regression with One Variable课程Wiki：Linear Regression with One Variable  基本概念训练集由训练样例(training example)组成的">
+<meta name="twitter:image" content="http://7xrrje.com1.z0.glb.clouddn.com/screenshot_05.png?imageMogr/v2/thumbnail/!45p">
 
 
 
@@ -136,13 +137,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/09/08/machine_learning_note_06/"/>
+  <link rel="canonical" href="http://yoursite.com/machine_learning_note_02/"/>
 
 
 
 
 
-  <title>Coursera机器学习笔记(六) - 正则化 | 大山</title>
+  <title>Coursera机器学习笔记(二) - 单变量线性回归 | 大山</title>
   
 
 
@@ -269,7 +270,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/08/machine_learning_note_06/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/machine_learning_note_02/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="大山">
@@ -286,7 +287,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Coursera机器学习笔记(六) - 正则化</h1>
+          <h1 class="post-title" itemprop="name headline">Coursera机器学习笔记(二) - 单变量线性回归</h1>
         
 
         <div class="post-meta">
@@ -355,15 +356,16 @@ tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
 <script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
 
+
 <blockquote>
-<p>课程地址：<a href="https://www.coursera.org/learn/machine-learning/home/week/3" target="_blank" rel="noopener">Regularization</a><br>课程Wiki：<a href="https://share.coursera.org/wiki/index.php/ML:Regularization" target="_blank" rel="noopener">Regularization</a></p>
+<p>课程地址：<a href="https://www.coursera.org/learn/machine-learning/home/week/1" target="_blank" rel="noopener">Linear Regression with One Variable</a><br>课程Wiki：<a href="https://share.coursera.org/wiki/index.php/ML:Linear_Regression_with_One_Variable" target="_blank" rel="noopener">Linear Regression with One Variable</a></p>
 </blockquote>
-<h4 id="过拟合"><a href="#过拟合" class="headerlink" title="过拟合"></a>过拟合</h4><p>如下图所示, 使用三种不同的多项式作为假设函数对数据进行拟合, 左一和右一分别为过拟合和欠拟合。<br><img src="http://7xrrje.com1.z0.glb.clouddn.com/screenshot_101.png" alt="pic01"></p>
+<h4 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h4><h5 id="训练集"><a href="#训练集" class="headerlink" title="训练集"></a>训练集</h5><p>由训练样例(training example)组成的集合就是训练集(training set)，如下图所示, 其中$(x, y)$是一个训练样例, $(x^{(i)}, y^{(i)})$第i个训练样例。<br><img src="http://7xrrje.com1.z0.glb.clouddn.com/screenshot_05.png?imageMogr/v2/thumbnail/!45p" alt="pic01"></p>
 <a id="more"></a>
-<p>对率回归:<br><img src="http://7xrrje.com1.z0.glb.clouddn.com/screenshot_102.png" alt="pic02"><br>解决过拟合问题大致分为两种, 一种是减少特征的数量, 可以人工选择一些比较重要的特征留下, 也可以使用模型选择算法(Model selection algorithm,后面的课程会介绍)；另一种就是正则化(Regularization)。<br><img src="http://7xrrje.com1.z0.glb.clouddn.com/screenshot_103.png" alt="pic03"></p>
-<h4 id="正则化"><a href="#正则化" class="headerlink" title="正则化"></a>正则化</h4><p>如图所示的两个假设函数, 其中第二个为过拟合. 那么该如何改变代价函数能够让最中的假设函数不过拟合? 对比两个假设函数我们可以看到, 它们的区别就在于第二个多了两个高阶项. 也就是说, 我们不希望出现后面两个高阶项, 即希望$\theta_3$、$\theta_4$尽可能小。<br><img src="http://7xrrje.com1.z0.glb.clouddn.com/screenshot_831.png" alt="pic04"><br>通过上面的想法, 我们把$\theta_3$、$\theta_4$放到代价函数中，并且加上很大的权重(1000):<br>$$J(\theta)=\frac{1}{2m}\sum_{i=1}^m(h_\theta(x^{(i)})-y^{(i)} )^2+1000\theta_3^2+1000\theta_4^2$$<br>现在如果要最小化代价函数, 那么最后两项也必须得最小. 这个时候, 就有$\theta_3\approx0$，$\theta_4\approx0$，从而这个四次多项式就变成了一个二次多项式, 解决了过拟合的问题。<br><img src="http://7xrrje.com1.z0.glb.clouddn.com/screenshot_104.png" alt="pic05"><br>对于正则化的一般思路是, 减少特征的数量, 降低模型的复杂度. 所以我们要对每个参数进行惩罚, 从而得到’更简单’的并且可以防止过拟合的模型. 但是在实际问题中我们很难判断哪些特征比较重要, 所以对每一个参数(除了第一个)参数进行惩罚, 将代价函数改为:<br>$$J(\theta)=\frac{1}{2m}\left[\sum_{i=1}^m(h_\theta(x^{(i)})-y^{(i)} )^2+\lambda\sum_{i=1}^n\theta_j^2\right]$$<br>其中，$\lambda\sum_{i=1}^n\theta_j^2$叫做正则化项(Regularization Term)，$\lambda$叫做正则化参数(Regularization Parameter)。$\lambda$的作用就是在”更好地拟合数据”和”防止过拟合”之间权衡。<br><img src="http://7xrrje.com1.z0.glb.clouddn.com/screenshot_105.png" alt="pic06"><br>如果$\lambda$过大的话，就会导致$\theta_1$、$\theta_2$、$\theta_3$…近似于0, 这样我们的假设函数就为：$h_\theta(x)=\theta_0$。这时就变成了欠拟合(Underfit). 所以需要选择一个合适的$\lambda$。后面的课程会讲到自动选择合适的$\lambda$的方法。<br><img src="http://7xrrje.com1.z0.glb.clouddn.com/screenshot_108.png" alt="pic07"></p>
-<h4 id="正则化线性回归"><a href="#正则化线性回归" class="headerlink" title="正则化线性回归"></a>正则化线性回归</h4><p>通过正则化之后的$J(\theta)$我们可以得到对应的梯度下降算法, 如下图所示. 因为我们不对$\theta_0$进行惩罚, 所以将$\theta_0$的规则单独写出来, 其余的参数更新规则如下图第三行公式. 公式前半部分$1-\alpha\frac{\lambda}{m}$是一个比1小一点点的数(教授举了个例子大概是0.99), 而公式的后半部分和没有进行正则化的梯度下降的公式的后半部分是完全一样的. 所以区别就在于前半部分会将$\theta_j$缩小(因为乘了一个小于1的数)。<br><img src="http://7xrrje.com1.z0.glb.clouddn.com/screenshot_112.png" alt="pic08"><br>同样, 在正规方程中, 我们只需要在公式中加上一部分如下图所示<br><img src="http://7xrrje.com1.z0.glb.clouddn.com/screenshot_110.png" alt="pic09"><br>即：<br>$$\theta=(X^TX+\lambda\begin{bmatrix} 0&amp;0&amp;0&amp;0&amp;…&amp;0\ 0&amp;1&amp;0&amp;0&amp;…&amp;0\ 0&amp;0&amp;1&amp;0&amp;…&amp;0\ 0&amp;0&amp;0&amp;1&amp;…&amp;0\ 0&amp;0&amp;0&amp;0&amp;…&amp;0 \ 0&amp;0&amp;0&amp;0&amp;…&amp;1 \end{bmatrix})^{-1}X^Ty$$<br>并且对于正则化后的正规方程, 只要$\lambda&gt;0$, 括号里的那一项总是可逆的:<br><img src="http://7xrrje.com1.z0.glb.clouddn.com/screenshot_832.png" alt="pic10"></p>
-<h4 id="正则化对率回归"><a href="#正则化对率回归" class="headerlink" title="正则化对率回归"></a>正则化对率回归</h4><p>类似地, 正则化逻辑回归中的代价函数和梯度下降如下图所示<br><img src="http://7xrrje.com1.z0.glb.clouddn.com/screenshot_114.png" alt="pic11"><br><img src="http://7xrrje.com1.z0.glb.clouddn.com/screenshot_111.png" alt="pic12"><br>下图是使用正则化的高级优化算法, 只需要在计算jVal时在后面加上一个正则化项以及在梯度后面减去一个$\frac{\lambda}{m}\theta_j$<br><img src="http://7xrrje.com1.z0.glb.clouddn.com/screenshot_113.png" alt="pic13"></p>
+<h5 id="假设函数"><a href="#假设函数" class="headerlink" title="假设函数"></a>假设函数</h5><p>使用某种学习算法对训练集的数据进行训练, 我们可以得到假设函数(Hypothesis Function), 如下图所示. 在房价的例子中，假设函数就是一个房价关于房子面积的函数。有了这个假设函数之后, 给定一个房子的面积我们就可以预测它的价格了。<br><img src="http://7xrrje.com1.z0.glb.clouddn.com/screenshot_583.png?imageMogr/v2/thumbnail/!55p" alt="pic02"><br>我们使用如下的形式表示假设函数, 为了方便，$h_\theta(x)$也可以记作$h(x)$<br>$${h_\theta(x)=\theta_0+\theta_1x}$$<br>以上这个模型就叫做单变量的线性回归(Linear Regression with One Variable). (Linear regression with one variable = Univariate linear regression，univariate是one variable的装逼写法。)<br><img src="http://7xrrje.com1.z0.glb.clouddn.com/screenshot_584.png?imageMogr/v2/thumbnail/!55p" alt="pic03"></p>
+<h4 id="代价函数"><a href="#代价函数" class="headerlink" title="代价函数"></a>代价函数</h4><h5 id="什么是代价函数"><a href="#什么是代价函数" class="headerlink" title="什么是代价函数"></a>什么是代价函数</h5><p>只要我们知道了假设函数, 我们就可以进行预测了. 关键是, 假设函数中有两个未知的量$\theta_0, \theta_1$，当选择不同的$\theta_0$和$\theta_1$时，我们模型的效果肯定是不一样的。如下图所示, 列举了三种不同的$\theta_0$和$\theta_1$下的假设函数。<br><img src="http://7xrrje.com1.z0.glb.clouddn.com/screenshot_08.png" alt="pic04"><br>现在的问题就是该如何选择这两个参数了。我们的想法是选择某个$\theta_0$和$\theta_1$，使得对于训练样例$(x,y)$，$h_\theta(x)$最接近$y$。越是接近, 代表这个假设函数越是准确, 这里我们选择均方误差来作为衡量标准, 即我们想要每个样例的估计值与真实值之间差的平方的均值最小。用公式表达为:<br>$${\mathop{minimize}\limits_{\theta_0,\theta_1} \frac{1}{2m}\sum_{i=0}^m\left(h_\theta(x^{(i)})-y^{(i)}\right)^2}$$<br>（其中$1/2$是为了后面方便计算）我们记<br>$${J(\theta_0,\theta_1)=\frac{1}{2m}\sum_{i=0}^m\left(h_\theta(x^{(i)})-y^{(i)}\right)^2}$$<br>这样就得到了我们的代价函数(cost function), 也就是我们的优化目标, 我们想要代价函数最小:<br>$$\mathop{minimize}\limits_{\theta_0,\theta_1}J(\theta_0,\theta_1)$$<br><img src="http://7xrrje.com1.z0.glb.clouddn.com/screenshot_10.png?imageMogr/v2/thumbnail/!45p" alt="pic05"></p>
+<h5 id="代价函数和假设函数"><a href="#代价函数和假设函数" class="headerlink" title="代价函数和假设函数"></a>代价函数和假设函数</h5><p>现在为了更方便地探究$h_\theta(x)$和$J(\theta_0,\theta_1)$的关系，先令$\theta_0=0$，得到了简化后的假设函数，有假设函数的定义可知此时的假设函数是经过原点的直线. 相应地也也得到简化的代价函数。如图所示:<br><img src="http://7xrrje.com1.z0.glb.clouddn.com/screenshot_11.png?imageMogr/v2/thumbnail/!45p" alt="pic06"><br>简化之后，我们令$\theta_1=1$，就得到$h_\theta(x)=x$，如下图左所示。图中三个红叉表示训练样例，通过代价函数的定义我们计算得出$J(1)=0$，对应下图右中的$(0,1)$坐标<br><img src="http://7xrrje.com1.z0.glb.clouddn.com/screenshot_12.png?imageMogr/v2/thumbnail/!45p" alt="pic07"><br>重复上面的步骤，再令$\theta_1=0.5$，得到$h_\theta(x)$如下图左所示。通过计算得出$J(0.5)=0.58$，对应下图右中的$(0.5,0.58)$<br><img src="http://7xrrje.com1.z0.glb.clouddn.com/screenshot_13.png?imageMogr/v2/thumbnail/!45p" alt="pic08"><br>对于不同的$\theta_1$，对应着不同的假设函数$h_\theta(x)$，于是就有了不同的$J(\theta_1)$。将这些点连接起来就可以得到$J(\theta_1)$关于$\theta_1$的函数图像，如下图所示：<br><img src="http://7xrrje.com1.z0.glb.clouddn.com/screenshot_14.png?imageMogr/v2/thumbnail/!45p" alt="pic09"><br>我们的目标就是找到一个$\theta$使得$J(\theta)$最小，通过上面的描点作图的方式, 我们可以从图中看出, 当$\theta=1$的时候，$J(\theta)$取到最小值。</p>
+<h5 id="代价函数与假设函数II"><a href="#代价函数与假设函数II" class="headerlink" title="代价函数与假设函数II"></a>代价函数与假设函数II</h5><p>在上一节中，我们令$\theta_0=0$，并且通过设置不同的$\theta_1$来描点作图得到$J(\theta_1)$的曲线。这一节我们不再令$\theta_0=0$，而是同时设置$\theta_0$和$\theta_1$的值，然后再绘出$J(\theta_0, \theta_1)$的图形。因为此时有两个变量，很容易想到$J(\theta_0, \theta_1)$应该是一个曲面, 如下图所示:<br><img src="http://7xrrje.com1.z0.glb.clouddn.com/screenshot_16.png?imageMogr/v2/thumbnail/!45p" alt="pic10"><br>这个图是教授用matlab绘制的，由于3D图形不太方便我们研究，我们就使用二维的等高线(上图右上角教授写的contour plots/figures)，这样看上去比较清楚一些。如下图右，越靠近中心表示$J(\theta_0, \theta_1)$的值越小(对应3D图中越靠近最低点的位置)。下图左表示当$\theta_0=800$，$\theta_1=0.15$的时候对应的$h_\theta(x)$，通过$\theta_0$和$\theta_1$的值可以找到下图右中$J(\theta_0, \theta_1)$的值。<br><img src="http://7xrrje.com1.z0.glb.clouddn.com/screenshot_17.png?imageMogr/v2/thumbnail/!45p" alt="pic11"><br>类似地：<br><img src="http://7xrrje.com1.z0.glb.clouddn.com/screenshot_18.png?imageMogr/v2/thumbnail/!45p" alt="pic12"><br><img src="http://7xrrje.com1.z0.glb.clouddn.com/screenshot_19.png?imageMogr/v2/thumbnail/!45p" alt="pic13"><br><img src="http://7xrrje.com1.z0.glb.clouddn.com/screenshot_20.png?imageMogr/v2/thumbnail/!45p" alt="pic14"><br>我们不断尝试直到找到一个最佳的$h_\theta(x)$。是否有特定的算法能帮助我们找到最佳的$h_\theta(x)$呢？下面我们就要介绍这个算法-<a href="https://bigmoutain.cn/machine_learning_note_02_addition/" target="_blank" rel="noopener">梯度下降算法</a>。</p>
 
       
     </div>
@@ -392,13 +394,11 @@ tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
       
         <div class="post-tags">
           
-            <a href="/tags/Machine-Learning/" rel="tag"><i class="fa fa-tag"></i> Machine Learning</a>
+            <a href="/tags/machinelearning/" rel="tag"><i class="fa fa-tag"></i> machinelearning</a>
           
-            <a href="/tags/Math/" rel="tag"><i class="fa fa-tag"></i> Math</a>
+            <a href="/tags/math/" rel="tag"><i class="fa fa-tag"></i> math</a>
           
-            <a href="/tags/Note/" rel="tag"><i class="fa fa-tag"></i> Note</a>
-          
-            <a href="/tags/Regularization/" rel="tag"><i class="fa fa-tag"></i> Regularization</a>
+            <a href="/tags/note/" rel="tag"><i class="fa fa-tag"></i> note</a>
           
         </div>
       
@@ -411,8 +411,8 @@ tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/09/07/machine_learning_note_05/" rel="next" title="Coursera机器学习笔记(五) - Logistic Regression">
-                <i class="fa fa-chevron-left"></i> Coursera机器学习笔记(五) - Logistic Regression
+              <a href="/machine_learning_note_01/" rel="next" title="Coursera机器学习笔记(一) - 监督学习vs无监督学习">
+                <i class="fa fa-chevron-left"></i> Coursera机器学习笔记(一) - 监督学习vs无监督学习
               </a>
             
           </div>
@@ -420,6 +420,10 @@ tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/machine_learning_note_02_addition/" rel="prev" title="Coursera机器学习笔记(二) - 单变量线性回归(补充 - 梯度下降算法)">
+                Coursera机器学习笔记(二) - 单变量线性回归(补充 - 梯度下降算法) <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -572,7 +576,7 @@ tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#过拟合"><span class="nav-number">1.</span> <span class="nav-text">过拟合</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#正则化"><span class="nav-number">2.</span> <span class="nav-text">正则化</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#正则化线性回归"><span class="nav-number">3.</span> <span class="nav-text">正则化线性回归</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#正则化对率回归"><span class="nav-number">4.</span> <span class="nav-text">正则化对率回归</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#基本概念"><span class="nav-number">1.</span> <span class="nav-text">基本概念</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#训练集"><span class="nav-number">1.1.</span> <span class="nav-text">训练集</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#假设函数"><span class="nav-number">1.2.</span> <span class="nav-text">假设函数</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#代价函数"><span class="nav-number">2.</span> <span class="nav-text">代价函数</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#什么是代价函数"><span class="nav-number">2.1.</span> <span class="nav-text">什么是代价函数</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#代价函数和假设函数"><span class="nav-number">2.2.</span> <span class="nav-text">代价函数和假设函数</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#代价函数与假设函数II"><span class="nav-number">2.3.</span> <span class="nav-text">代价函数与假设函数II</span></a></li></ol></li></ol></div>
             
 
           </div>
