@@ -359,9 +359,9 @@ tex2jax: {inlineMath: [[&#39;$&#39;,&#39;$&#39;], [&#39;\\(&#39;,&#39;\\)&#39;]]
     
       <category term="machinelearning" scheme="http://yoursite.com/tags/machinelearning/"/>
     
-      <category term="deeplearning" scheme="http://yoursite.com/tags/deeplearning/"/>
-    
       <category term="math" scheme="http://yoursite.com/tags/math/"/>
+    
+      <category term="deeplearning" scheme="http://yoursite.com/tags/deeplearning/"/>
     
   </entry>
   
