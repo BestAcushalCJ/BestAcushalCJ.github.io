@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Machine Learning,Math,Note,Neural Network," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="大山" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="MathJax.Hub.Config({ tex2jax: {inlineMath: [[&apos;$&apos;,&apos;$&apos;], [&apos;\\(&apos;,&apos;\\)&apos;]]} });       课程地址：Neural Networks:Learning课程Wiki：Neural Networks:Learning  代价函数在神经网络中我们使用L来表示总的层数, 例如下图中L=4; 使用$s_l$来表示在第$l$层unit的个">
+<meta name="keywords" content="Machine Learning,Math,Note,Neural Network">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Coursera机器学习笔记(八) - 神经网络(下)">
+<meta property="og:url" content="http://yoursite.com/machine_learning_note_08/index.html">
+<meta property="og:site_name" content="大山">
+<meta property="og:description" content="MathJax.Hub.Config({ tex2jax: {inlineMath: [[&apos;$&apos;,&apos;$&apos;], [&apos;\\(&apos;,&apos;\\)&apos;]]} });       课程地址：Neural Networks:Learning课程Wiki：Neural Networks:Learning  代价函数在神经网络中我们使用L来表示总的层数, 例如下图中L=4; 使用$s_l$来表示在第$l$层unit的个">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://blog-1255898404.cos.ap-shanghai.myqcloud.com/ML_08/pic01.png">
+<meta property="og:image" content="https://blog-1255898404.cos.ap-shanghai.myqcloud.com/ML_08/pic02.png">
+<meta property="og:image" content="https://blog-1255898404.cos.ap-shanghai.myqcloud.com/ML_08/pic03.png">
+<meta property="og:image" content="https://blog-1255898404.cos.ap-shanghai.myqcloud.com/ML_08/pic04.png">
+<meta property="og:image" content="https://blog-1255898404.cos.ap-shanghai.myqcloud.com/ML_08/pic05.png">
+<meta property="og:image" content="https://blog-1255898404.cos.ap-shanghai.myqcloud.com/ML_08/pic06.png">
+<meta property="og:image" content="https://blog-1255898404.cos.ap-shanghai.myqcloud.com/ML_08/pic07.png">
+<meta property="og:image" content="https://blog-1255898404.cos.ap-shanghai.myqcloud.com/ML_08/pic08.png">
+<meta property="og:image" content="https://blog-1255898404.cos.ap-shanghai.myqcloud.com/ML_08/pic09.png">
+<meta property="og:image" content="https://blog-1255898404.cos.ap-shanghai.myqcloud.com/ML_08/pic10.png">
+<meta property="og:image" content="https://blog-1255898404.cos.ap-shanghai.myqcloud.com/ML_08/pic11.png">
+<meta property="og:image" content="https://blog-1255898404.cos.ap-shanghai.myqcloud.com/ML_08/pic12.png">
+<meta property="og:image" content="https://blog-1255898404.cos.ap-shanghai.myqcloud.com/ML_08/pic13.png">
+<meta property="og:image" content="https://blog-1255898404.cos.ap-shanghai.myqcloud.com/ML_08/pic14.png">
+<meta property="og:image" content="https://blog-1255898404.cos.ap-shanghai.myqcloud.com/ML_08/pic15.png">
+<meta property="og:image" content="https://blog-1255898404.cos.ap-shanghai.myqcloud.com/ML_08/pic16.png">
+<meta property="og:image" content="https://blog-1255898404.cos.ap-shanghai.myqcloud.com/ML_08/pic17.png">
+<meta property="og:image" content="https://blog-1255898404.cos.ap-shanghai.myqcloud.com/ML_08/pic18.png">
+<meta property="og:updated_time" content="2018-10-20T11:32:18.034Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Coursera机器学习笔记(八) - 神经网络(下)">
+<meta name="twitter:description" content="MathJax.Hub.Config({ tex2jax: {inlineMath: [[&apos;$&apos;,&apos;$&apos;], [&apos;\\(&apos;,&apos;\\)&apos;]]} });       课程地址：Neural Networks:Learning课程Wiki：Neural Networks:Learning  代价函数在神经网络中我们使用L来表示总的层数, 例如下图中L=4; 使用$s_l$来表示在第$l$层unit的个">
+<meta name="twitter:image" content="https://blog-1255898404.cos.ap-shanghai.myqcloud.com/ML_08/pic01.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/machine_learning_note_08/"/>
+
+
+
+
+
+  <title>Coursera机器学习笔记(八) - 神经网络(下) | 大山</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+<a href="https://github.com/BestAcushalCJ" class="github-corner" aria-label="View source on Github"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">大山</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">这是一个热爱技术、热爱烹饪的肥宅</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/machine_learning_note_08/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="大山">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="大山">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Coursera机器学习笔记(八) - 神经网络(下)</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/机器学习/" itemprop="url" rel="index">
+                    <span itemprop="name">机器学习</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+});
+</script>
+
+<script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+<blockquote>
+<p>课程地址：<a href="https://www.coursera.org/learn/machine-learning/home/week/5" target="_blank" rel="noopener">Neural Networks:Learning</a><br>课程Wiki：<a href="https://share.coursera.org/wiki/index.php/ML:Neural_Networks:_Learning" target="_blank" rel="noopener">Neural Networks:Learning</a></p>
+</blockquote>
+<h4 id="代价函数"><a href="#代价函数" class="headerlink" title="代价函数"></a>代价函数</h4><p>在神经网络中我们使用L来表示总的层数, 例如下图中L=4; 使用$s_l$来表示在第$l$层unit的个数（不包括bias unit）,如下图中$s_1=3$,$s_2=5$,$s3=5$,$s_L=4$。对于一个分类问题要么是二分类(Binary classification)要么是多分类(Multi-class classification)。对于二分类问题, 神经网络只需要一个输出单元; 而对于多分类问题, 需要K个输出单元, 其中K为类的个数。<br><img src="https://blog-1255898404.cos.ap-shanghai.myqcloud.com/ML_08/pic01.png" alt="pic01"><br>这里我们按照多分类对代价函数进行描述. 下图为神经网络的代价函数与logistic回归的代价函数的对比。对于前半部分, 因为神经网络中有K个输出, 所以先要对这K个输出的损失求和; 对于后半部分, 因为每一层(除了输出层)都有一个$\Theta$,所以正则化项要将这些权重都包括进来(当然, 不需要包括bias unit的权重)。<br>如下图所示，$h_\Theta(x)$是一个K维的向量, 即$h_\Theta(x) \in \rm I!R^K$,我们用$(h_\Theta(x))_i$来表示第i个输出值。<br><img src="https://blog-1255898404.cos.ap-shanghai.myqcloud.com/ML_08/pic02.png" alt="pic02"><br>下面这段文字是这个课程<a href="https://share.coursera.org/wiki/index.php/ML:Neural_Networks:_Learning" target="_blank" rel="noopener">wiki</a>对于神经网络代价函数的解释：</p>
+<blockquote>
+<p>the double sum simply adds up the logistic regression costs calculated for each cell in the output layer;<br>the triple sum simply adds up the squares of all the individual Θs in the entire network;<br>the i in the triple sum does not refer to training example i.</p>
+</blockquote>
+<h4 id="逆-反向传播算法"><a href="#逆-反向传播算法" class="headerlink" title="逆/反向传播算法"></a>逆/反向传播算法</h4><p>知道了代价函数之后, 我们还是按照套路来求代价函数的最优解. 同样地, 我们希望使用梯度下降来找到最优解. 想要使用梯度下降当然需要求出”梯度”即偏导项$\frac{\partial}{\partial\Theta_{ij}^{(l)}}J(\Theta)$。而计算这个偏导项的过程就叫做逆传播算法或者叫反向传播算法。<br><img src="https://blog-1255898404.cos.ap-shanghai.myqcloud.com/ML_08/pic03.png" alt="pic03"><br>首先我们根据前向传播算法来得到$a^{(1)}$,$a^{(2)}$,$a^{(3)}$,$a^{(4)}$和$z^{(1)}$,$z^{(2)}$,$z^{(3)}$。<br><img src="https://blog-1255898404.cos.ap-shanghai.myqcloud.com/ML_08/pic04.png" alt="pic04"><br>在逆传播算法中我们定义每层的误差<br>$$\delta^{(l)}=\frac{\partial}{\partial z^{(l)}}J(\Theta)$$<br>$\delta_j^{(l)}$表示第$l$层第$j$个节点的误差。为了求出偏导项$\frac{\partial}{\partial\Theta_{ij}^{(l)}}J(\Theta)$，我们首先要求每一层的$\delta$(不包括第一层, 因为第一层是输入层)。首先, 对于输出层即第4层(这里我们不考虑正则化):<br>$$\begin{align}<br>\delta_j^{(4)} &amp; = \frac{\partial}{\partial z_i^{(4)}}J(\Theta) \ \ &amp; = \frac{\partial J(\Theta)}{\partial a_i^{(4)}}\frac{\partial a_i^{(4)}}{\partial z_i^{(4)}} \ \ &amp; = -\frac{\partial}{\partial a_i^{(4)}}\sum_{k=1}^K\left[y_kloga_k^{(4)}+(1-y_k)log(1-a_k^{(4)})\right]g’(z_i^{(4)})  \ \ &amp; = -\frac{\partial}{\partial a_i^{(4)}}\left[y_iloga_i^{(4)}+(1-y_i)log(1-a_i^{(4)})\right]g(z_i^{(4)})(1-g(z_i^{(4)}))  \ \ &amp; = \left(\frac{1-y_i}{1-a_i^{(4)}}-\frac{y_i}{a_i^{(4)}}\right)a_i^{(4)}(1-a_i^{(4)}) \ \ &amp; = (1-y_i)a_i^{(4)} - y_i(1-a_i^{(4)}) \ \ &amp; = a_i^{(4)} - y_i \<br>\end{align}$$<br>关于$g’(z_i^{(4)})$的证明见本文最后的补充材料。其中$a_j^{(4)}$就是$(h_\Theta(x))_j$，$j$是输出单元的个数，用向量化的表示为：$\delta^{(4)}=a^{(4)}-y$，对于剩下每层的$\delta_i^{(l)}$如下：<br>$$\begin{align} \delta_i^{(l)} &amp; = \frac{\partial}{\partial z_i^{(l)}}J(\Theta) \ \ &amp; = \sum_{j=1}^{S_j}\frac{\partial J(\Theta)}{\partial z_j^{(l+1)}}\cdot\frac{\partial z_j^{(l+1)}}{\partial a_i^{(l)}}\cdot\frac{\partial a_i^{(l)}}{\partial z_i^{(l)}} \ \ &amp; = \sum_{j=1}^{S_j}\delta_j^{(l+1)}\cdot\Theta_{ij}^{(l)}\cdot g’(z_i^{(l)}) \ \ &amp; = g’(z_i^{(l)})\sum_{j=1}^{S_j}\delta_j^{(l+1)}\cdot\Theta_{ij}^{(l)} \end{align}$$<br>写成向量的形式即为:<br>$$\delta^{(l)}=(\Theta^{(l)})^T\delta^{(l+1)}.*g’(z^{(l)})$$<br>求出来所有的$\delta$以后，可以很容易得到$\frac{\partial}{\partial\Theta_{ij}^{(l)}}J(\Theta)=a_i^{(l)}\delta_j^{(l+1)}$，这就是我们要求的偏导项(忽略正则化)。<br><img src="https://blog-1255898404.cos.ap-shanghai.myqcloud.com/ML_08/pic05.png" alt="pic05"><br>上面所有的推导都是基于一个样本的, 现在假设有$m$个样本, 我们可以使用BGD来求解最优值。假设我们有一个训练集如下图所示, 对于所有的$l,i,j$，我们先令$\Delta_{ij}^{(l)}=0$，然后对于每一个样本, 都进行如下图所示的计算并使用$\Delta_{ij}^{(l)}$进行累加。其中$\Delta_{ij}^{(l)}:=\Delta_{ij}^{(l)}+a_j^{(l)}\delta_i^{(l+1)}$用向量的表示形式为:$\Delta^{(l)}:=\Delta^{(l)}+\delta^{(l+1)}(a^{(l)})^T$，最后, 计算出$D_{ij}^{(l)}$如下图所示(注意,ppt上有个小错误, 我们的代价函数应该是$D_{ij}^{(l)}:=\frac{1}{m}(\Delta_{ij}^{(l)}+\lambda\Theta_{ij}^{(l)})$<br><img src="https://blog-1255898404.cos.ap-shanghai.myqcloud.com/ML_08/pic06.png" alt="pic06"><br>关于BP算法, 可以参考Caltech的<a href="https://www.youtube.com/watch?v=Ih5Mr93E-2c&amp;t=3013s&amp;index=10&amp;list=PLD63A284B7615313A" target="_blank" rel="noopener">Learning from Data</a></p>
+<h4 id="参数调整"><a href="#参数调整" class="headerlink" title="参数调整"></a>参数调整</h4><p>为了使用高级优化算法, 这一节我们讲如何调整参数. 在神经网络中, 参数$\Theta^{(j)}$是一个矩阵, 而在之前利用高级优化算法的课程中, 我们知道$\theta$是一个向量, 这个时候就需要对$\Theta$进行Unrolling。<br><img src="https://blog-1255898404.cos.ap-shanghai.myqcloud.com/ML_08/pic07.png" alt="pic07"><br>如下图所示的神经网络中, (ppt中出现了一些错误, 根据$\Theta_1$,$\Theta_2$,$\Theta_3$，这个神经网络应该是有4层, 并且$s_1=10$,$s_2=10$,$s_3=10$,$s_4=1$)。$\Theta^{(1)}$,$\Theta^{(2)}$,$\Theta^{(3)}$,$D^{(1)}$,$D^{(2)}$,$D^{(3)}$,如下图所示, 在Octave/Matlab中, 我们可以使用如下代码将所有对应的矩阵转化成一个向量：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">thetaVec = [Theta1(:); Theta2(:); Theta3(:)];</span><br><span class="line">DVec = [D1(:); D2(:); D3(:)]</span><br><span class="line">%使用如下代码可以得到原来的矩阵</span><br><span class="line">Theta1 = reshape(thetaVec(1: 110), 10, 11);</span><br><span class="line">Theta2 = reshape(thetaVec(111: 220), 10, 11);</span><br><span class="line">Theta3 = reshape(thetaVec(221: 231), 1, 11);</span><br></pre></td></tr></table></figure></p>
+<p><img src="https://blog-1255898404.cos.ap-shanghai.myqcloud.com/ML_08/pic08.png" alt="pic08"><br>下图为利用unrolling来使用高级优化算法的步骤：<br><img src="https://blog-1255898404.cos.ap-shanghai.myqcloud.com/ML_08/pic09.png" alt="pic09"></p>
+<h4 id="梯度检查"><a href="#梯度检查" class="headerlink" title="梯度检查"></a>梯度检查</h4><p>由于神经网络的复杂性, 我们在使用梯度下降或者其他的高级优化算法时可能会出现bug, 即使感觉上好像没什么问题。那么如何能有效地检查出问题呢, 这个时候就需要使用Gradient Checking。<br>首先, 如下图所示, 我们使用如下近似：$\frac{d}{d\theta}J(\theta)\approx \frac{J(\theta+\epsilon)-J(\theta-\epsilon)}{2\epsilon}$，通常我们取$\epsilon=10^{-4}$。<br><img src="https://blog-1255898404.cos.ap-shanghai.myqcloud.com/ML_08/pic10.png" alt="pic10"><br>上面的例子中$\theta$是一个实数, 在下图中, $\theta$是一个向量, 此时是对偏导数进行数值估计。<br><img src="https://blog-1255898404.cos.ap-shanghai.myqcloud.com/ML_08/pic11.png" alt="pic11"><br>在实际运用中, 我们使用如下代码来计算gradApprox。然后, 我们将通过逆传播算法计算得来的DVec和gradApprox进行比较, 如果这两个值近似的话, 那么就说明我们的逆传播算法运行地没有问题。<br><img src="https://blog-1255898404.cos.ap-shanghai.myqcloud.com/ML_08/pic12.png" alt="pic12"><br>下图描述了使用Gradient Checking时的步骤。需要主意的是, 在得到gradApprox之后一定要即时关闭Gradient Checking, 因为它会非常大地消耗计算资源。<br><img src="https://blog-1255898404.cos.ap-shanghai.myqcloud.com/ML_08/pic13.png" alt="pic13"></p>
+<h4 id="随机初始化"><a href="#随机初始化" class="headerlink" title="随机初始化"></a>随机初始化</h4><p>在之前的linear regression和logistic regression中我们初始化$\theta$的值为0。在神经网络中也可以这么初始化吗?现初始化$\Theta_{ij}^{(l)}=0$，此时会有$a_1^{(2)}=a_2^{(2)}$,$\delta_1^{(2)}=\delta_2^{(2)}$。这样不论进行多少次更新, 永远会有$a_1^{(2)}=a_2^{(2)}$，也就是说这两个神经元是完全等同的, 这显然不合理, 那么我们应该如何初始化参数呢?<br><img src="https://blog-1255898404.cos.ap-shanghai.myqcloud.com/ML_08/pic14.png" alt="pic14"><br>对于$\Theta^{(1)} \in \mathbb{R}^{10\times 11}$，使用随机函数来进行初始化：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Theta1 = rand(10, 11)*(2*INIT_EPSILON) - INIT_EPSILON</span><br></pre></td></tr></table></figure></p>
+<p><img src="https://blog-1255898404.cos.ap-shanghai.myqcloud.com/ML_08/pic15.png" alt="pic15"></p>
+<h4 id="模型选择"><a href="#模型选择" class="headerlink" title="模型选择"></a>模型选择</h4><p>神经网络有许许多多种结构, 我们应该如何选择神经网络的结构？<br>在神经网络中, 有两个是确定的, 那就是输入单元的个数和输出单元的个数。因为前者就是特征的个数（维度）, 而后者是分类的数量。一个合理的默认值为, 有一个隐藏层；或者有多个隐藏层, 并且这些隐藏层单元数量相等。<br><img src="https://blog-1255898404.cos.ap-shanghai.myqcloud.com/ML_08/pic16.png" alt="pic16"></p>
+<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p><img src="https://blog-1255898404.cos.ap-shanghai.myqcloud.com/ML_08/pic17.png" alt="pic17"><br><img src="https://blog-1255898404.cos.ap-shanghai.myqcloud.com/ML_08/pic18.png" alt="pic18"></p>
+<h4 id="补充材料"><a href="#补充材料" class="headerlink" title="补充材料"></a>补充材料</h4><p>$$\begin{align} \frac{\partial g(z)}{\partial z} &amp; = -\left( \frac{1}{1 + e^{-z}} \right)^2\frac{\partial{}}{\partial{z}} \left(1 + e^{-z} \right) \ \ &amp; = -\left( \frac{1}{1 + e^{-z}} \right)^2e^{-z}\left(-1\right) \ \ &amp; = \left( \frac{1}{1 + e^{-z}} \right) \left( \frac{1}{1 + e^{-z}} \right)\left(e^{-z}\right) \ \ &amp; = \left( \frac{1}{1 + e^{-z}} \right) \left( \frac{e^{-z}}{1 + e^{-z}} \right) \ \ &amp; = \left( \frac{1}{1+e^{-z}}\right)\left( \frac{1+e^{-z}}{1+e^{-z}}-\frac{1}{1+e^{-z}}\right) \ \ &amp; = g(z) \left( 1 - g(z)\right) \ \ \end{align}$$</p>
+
+      
+    </div>
+    
+    
+    
+
+    <div>
+      
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+
+      
+    </div>
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Machine-Learning/" rel="tag"><i class="fa fa-tag"></i> Machine Learning</a>
+          
+            <a href="/tags/Math/" rel="tag"><i class="fa fa-tag"></i> Math</a>
+          
+            <a href="/tags/Note/" rel="tag"><i class="fa fa-tag"></i> Note</a>
+          
+            <a href="/tags/Neural-Network/" rel="tag"><i class="fa fa-tag"></i> Neural Network</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/machine_learning_note_07/" rel="next" title="Coursera机器学习笔记(七) - 神经网络(上)">
+                <i class="fa fa-chevron-left"></i> Coursera机器学习笔记(七) - 神经网络(上)
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.jpeg"
+                alt="大山" />
+            
+              <p class="site-author-name" itemprop="name">大山</p>
+              <p class="site-description motion-element" itemprop="description">孤高锦瑟笑游侠</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/BestAcushalCJ" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#代价函数"><span class="nav-number">1.</span> <span class="nav-text">代价函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#逆-反向传播算法"><span class="nav-number">2.</span> <span class="nav-text">逆/反向传播算法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#参数调整"><span class="nav-number">3.</span> <span class="nav-text">参数调整</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#梯度检查"><span class="nav-number">4.</span> <span class="nav-text">梯度检查</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#随机初始化"><span class="nav-number">5.</span> <span class="nav-text">随机初始化</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#模型选择"><span class="nav-number">6.</span> <span class="nav-text">模型选择</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#总结"><span class="nav-number">7.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#补充材料"><span class="nav-number">8.</span> <span class="nav-text">补充材料</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">大山</span>
+
+  
+</div>
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+  本站访客数:<span id="busuanzi_value_site_uv"></span>
+</span>
+</div>
+
+<!--
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+
+
+
+-->
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共15.5k字</span>
+</div>
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
