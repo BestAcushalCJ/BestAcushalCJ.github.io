@@ -254,6 +254,148 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/paper_writing_structure/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="大山">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="大山">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/paper_writing_structure/" itemprop="url">论文写作常用结构记录</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/随笔/" itemprop="url" rel="index">
+                    <span itemprop="name">随笔</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h4 id="1-Introduction"><a href="#1-Introduction" class="headerlink" title="1 Introduction"></a>1 Introduction</h4><h5 id="1-1-研究背景、目的、意义"><a href="#1-1-研究背景、目的、意义" class="headerlink" title="1.1 研究背景、目的、意义"></a>1.1 研究背景、目的、意义</h5><h5 id="1-2-避障的基本理论、通用算法"><a href="#1-2-避障的基本理论、通用算法" class="headerlink" title="1.2 避障的基本理论、通用算法"></a>1.2 避障的基本理论、通用算法</h5><p>这里讲一下研究现状，包括避障和自己使用的算法</p>
+<h6 id="1-2-1-国外研究现状"><a href="#1-2-1-国外研究现状" class="headerlink" title="1.2.1 国外研究现状"></a>1.2.1 国外研究现状</h6><h5 id="1-2-2-国内研究现状"><a href="#1-2-2-国内研究现状" class="headerlink" title="1.2.2 国内研究现状"></a>1.2.2 国内研究现状</h5><h5 id="1-3-本文的主要研究内容"><a href="#1-3-本文的主要研究内容" class="headerlink" title="1.3 本文的主要研究内容"></a>1.3 本文的主要研究内容</h5><p>在这里把做过的事情要地描述一下</p>
+<h5 id="1-4-小结"><a href="#1-4-小结" class="headerlink" title="1.4 小结"></a>1.4 小结</h5><p>把上面讲过的点串一下（每一章的小结都一样）</p>
+<h4 id="2-避障方法"><a href="#2-避障方法" class="headerlink" title="2 避障方法"></a>2 避障方法</h4><h5 id="2-1-原理"><a href="#2-1-原理" class="headerlink" title="2.1 原理"></a>2.1 原理</h5><p>这里主要是避障原理以及用到的算法所必须的先验知识（在下面公式推导中用的到的）</p>
+<h5 id="2-2-方法"><a href="#2-2-方法" class="headerlink" title="2.2 方法"></a>2.2 方法</h5><p>这里主要写只用DDPG来做避障的一个推导</p>
+<h5 id="2-3-我提出的方法"><a href="#2-3-我提出的方法" class="headerlink" title="2.3 我提出的方法"></a>2.3 我提出的方法</h5><p>这里主要写自己修改后的方法，由于做了两次修改，所以在这里分为两个小部分</p>
+<h6 id="2-3-1-fuzzy-ART-DDPG"><a href="#2-3-1-fuzzy-ART-DDPG" class="headerlink" title="2.3.1 fuzzy ART + DDPG"></a>2.3.1 fuzzy ART + DDPG</h6><h5 id="2-3-2-在2-3-1的基础上加入好奇心机制"><a href="#2-3-2-在2-3-1的基础上加入好奇心机制" class="headerlink" title="2.3.2 在2.3.1的基础上加入好奇心机制"></a>2.3.2 在2.3.1的基础上加入好奇心机制</h5><h5 id="2-4-小结"><a href="#2-4-小结" class="headerlink" title="2.4 小结"></a>2.4 小结</h5><p>####3  实验验证</p>
+<h5 id="3-1-实验设置"><a href="#3-1-实验设置" class="headerlink" title="3.1 实验设置"></a>3.1 实验设置</h5><p>在这里讲一下电脑配置参数、仿真环境设计（可以分点）</p>
+<h5 id="3-2-实验"><a href="#3-2-实验" class="headerlink" title="3.2 实验"></a>3.2 实验</h5><p>分别给出上述3个模型的训练（预测）结果，因为都是一边训练一边预测的</p>
+<h6 id="3-2-1-DDPG"><a href="#3-2-1-DDPG" class="headerlink" title="3.2.1 DDPG"></a>3.2.1 DDPG</h6><h6 id="3-2-2-fuzzy-ART-DDPG"><a href="#3-2-2-fuzzy-ART-DDPG" class="headerlink" title="3.2.2 fuzzy ART + DDPG"></a>3.2.2 fuzzy ART + DDPG</h6><h6 id="3-2-3-fuzzy-ART-DDPG-with-curiosity"><a href="#3-2-3-fuzzy-ART-DDPG-with-curiosity" class="headerlink" title="3.2.3 fuzzy ART + DDPG with curiosity"></a>3.2.3 fuzzy ART + DDPG with curiosity</h6><h5 id="3-3-对比分析、讨论"><a href="#3-3-对比分析、讨论" class="headerlink" title="3.3 对比分析、讨论"></a>3.3 对比分析、讨论</h5><h5 id="3-4-小结"><a href="#3-4-小结" class="headerlink" title="3.4 小结"></a>3.4 小结</h5><h4 id="4-结论"><a href="#4-结论" class="headerlink" title="4 结论"></a>4 结论</h4><h5 id="4-1-总结"><a href="#4-1-总结" class="headerlink" title="4.1 总结"></a>4.1 总结</h5><h5 id="4-2-尚且存在的问题、未来要做的工作（展望）"><a href="#4-2-尚且存在的问题、未来要做的工作（展望）" class="headerlink" title="4.2 尚且存在的问题、未来要做的工作（展望）"></a>4.2 尚且存在的问题、未来要做的工作（展望）</h5>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+      
+    </div>
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/RL_env_setup/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1593,148 +1735,6 @@ tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/jiefeidao_comment/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="大山">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpeg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="大山">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/jiefeidao_comment/" itemprop="url">《极恶非道》观后感</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/影评/" itemprop="url" rel="index">
-                    <span itemprop="name">影评</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <blockquote>
-<p>无关乎生存，仅在乎利益。这是电影交代的黑帮从上而下的恶，这种恶充斥了整部电影，不仅黑帮，也有警察。</p>
-</blockquote>
-<p><img src="https://pic2.zhimg.com/v2-3dec37c2122bb378247032a377f957d4_qhd.jpg" alt="北野武照片"></p>
-<p>北野武是以拍摄黑帮片出道，早期的《奏鸣曲》是一部故事完全发生黑帮内部的电影，但北野武没有把电影拍成类型化的模式，而是嚼碎了各种类型化的元素，为之注入了他个人独特的对于荒诞生命的严峻思考。2000年赴美拍摄的《大佬》倒是比较类型化，影片不断展示帮派战斗的过程，还充满了东西方文化的差异比较，生死相托的日式侠义精神在影片中被反复讴歌。<br>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/jiefeidao_comment/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-      
-    </div>
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1789,7 +1789,7 @@ tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-count">16</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1800,7 +1800,7 @@ tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -1811,7 +1811,7 @@ tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-count">20</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -1900,7 +1900,7 @@ tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共17.8k字</span>
+  <span class="post-count">博客全站共18.1k字</span>
 </div>
 
         
