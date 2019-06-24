@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-04-23T13:54:39.755Z</updated>
+  <updated>2019-06-24T10:05:51.071Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="http://yoursite.com/graduation/"/>
+    <id>http://yoursite.com/graduation/</id>
+    <published>2019-06-24T09:52:22.711Z</published>
+    <updated>2019-06-24T10:05:51.071Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="毕业总结"><a href="#毕业总结" class="headerlink" title="毕业总结"></a>毕业总结</h4><blockquote><p>江湖路远，有缘再见</p></blockquote><p>6月5日答辩结束时，那种3个月以来的如释重负让我以为这就是毕业的感觉。坐在出租车上从东院赶回余家头校区，路上的街景并不熟悉，大学四年没有来过几次这边校区，一直都在余家头摸爬滚打。<br>余家头校区，不如说是余家头男子职业技术学院，夏季天热人多，冬天酷冷路滑，春秋两季只有短短数十天，宿舍没热水，11点以后会断电。种种不如意，分别时确实万般不舍得。</p><blockquote><p>未完待续。。。</p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h4 id=&quot;毕业总结&quot;&gt;&lt;a href=&quot;#毕业总结&quot; class=&quot;headerlink&quot; title=&quot;毕业总结&quot;&gt;&lt;/a&gt;毕业总结&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;江湖路远，有缘再见&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;6月5日答辩结束时，那种3个月以来的
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>本科毕设论文写作结构记录</title>
